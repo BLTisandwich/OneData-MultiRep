@@ -28,7 +28,11 @@ scene to K soft tokens that are fed in through `inputs_embeds`.
 
 ## High-Level Idea
 
-![Architecture: three small encoders, Q-Former fusion with the question, 16 soft tokens into a frozen LLM](../pics/fig0_architecture.png)
+![Architecture (any modality): N representations of one data instance, N small encoders, Q-Former fusion with the question, K soft tokens into a frozen LLM](../pics/fig0_architecture.png)
+
+The 3D instance used in this project (N = 3: mesh / point cloud / views, K = 16, Qwen2.5-0.5B):
+
+![Architecture, 3D instance](../pics/fig0_architecture_3d.png)
 
 - **Budget-matched comparison.** For each setting, the encoder width is searched so that all trainable parameters equal *B*: 1M here.
   The LLM stays frozen.
