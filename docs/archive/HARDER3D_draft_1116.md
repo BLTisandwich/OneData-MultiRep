@@ -28,11 +28,11 @@ scene to K soft tokens that are fed in through `inputs_embeds`.
 
 ## High-Level Idea
 
-![Architecture (any modality): N representations of one data instance, N small encoders, Q-Former fusion with the question, K soft tokens into a frozen LLM](../pics/fig0_architecture.png)
+![Architecture (any modality): N representations of one data instance, N small encoders, Q-Former fusion with the question, K soft tokens into a frozen LLM](../../pics/fig0_architecture.png)
 
 The 3D instance used in this project (N = 3: mesh / point cloud / views, K = 16, Qwen2.5-0.5B):
 
-![Architecture, 3D instance](../pics/fig0_architecture_3d.png)
+![Architecture, 3D instance](../../pics/fig0_architecture_3d.png)
 
 - **Budget-matched comparison.** For each setting, the encoder width is searched so that all trainable parameters equal *B*: 1M here.
   The LLM stays frozen.
@@ -46,7 +46,7 @@ The 3D instance used in this project (N = 3: mesh / point cloud / views, K = 16,
   - There are 14 colors in 7 bright/dark pairs under one light, so a shadowed bright color ≈ a lit dark one.
   - There are 6 balanced tasks: shape, color, count, shape-of-color, color-of-shape, and left-of.
 
-![Scene examples: oblique render, mesh graph, point cloud, three 32 px views (RGB, depth, mask), questions](../pics/scene_examples.png)
+![Scene examples: oblique render, mesh graph, point cloud, three 32 px views (RGB, depth, mask), questions](../../pics/scene_examples.png)
 
 ### Toy example: one scene, six questions
 
@@ -103,10 +103,10 @@ running anything. The table compares it with the 1M results.
 | View only | .22 | .09 | .88 | .21 | .07 | .48 | .33 |
 | Textify, zero-shot\* | .00 | .18 | .00 | .24 | .19 | .00 | .10 |
 
-![Average accuracy per setting](../pics/fig1_avg_accuracy.png)
-![Per-task accuracy heatmap](../pics/fig2_per_task_heatmap.png)
-![Input tokens and training time vs accuracy](../pics/fig4_cost.png)
-![Learning curves](../pics/fig3_learning_curves.png)
+![Average accuracy per setting](../../pics/fig1_avg_accuracy.png)
+![Per-task accuracy heatmap](../../pics/fig2_per_task_heatmap.png)
+![Input tokens and training time vs accuracy](../../pics/fig4_cost.png)
+![Learning curves](../../pics/fig3_learning_curves.png)
 
 Slide 4 layout suggestion: fig1 or fig2 as the main figure, plus fig4 as a small inset. fig3 is backup.
 
