@@ -1,0 +1,11 @@
+{
+  "source_repository": "https://github.com/BLTisandwich/OneData-MultiRep",
+  "source_commit": "c0494a6076b024d9964d358ac39356483470a029",
+  "generator_notebooks": [
+    "OneData_OmniBench_Lee_400_GDrive.ipynb",
+    "OneData_OmniBench_Lazizbek_400_GDrive.ipynb"
+  ],
+  "dataset": "OneData-OmniBench synchronized sensor episodes",
+  "provided_data": false,
+  "provided_model_weights": false
+}

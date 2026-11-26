@@ -1,0 +1,25 @@
+{
+  "version": "aligned-final-v1",
+  "source_episodes": 800,
+  "counts": {
+    "train_reference": 418,
+    "validation_reference": 66,
+    "validation_execution": 70,
+    "test_reference": 194,
+    "test_execution": 209
+  },
+  "test_execution_splits": {
+    "test_iid": 69,
+    "test_compositional": 70,
+    "test_visual_ood": 70
+  },
+  "primary_qa_counts": {
+    "train": 2789,
+    "val": 417,
+    "test_iid": 418,
+    "test_compositional": 420,
+    "test_visual_ood": 425
+  },
+  "t7": "train_only",
+  "manifest_sha256": "487eadab022dad9eb1f2473495e7e6da67756f5af6f806caebba92925bc071cd"
+}

@@ -1,0 +1,94 @@
+project_root: ..
+experiment: onedata
+seed: 42
+model: qwen25_05b
+models:
+  qwen25_05b:
+    name: Qwen2.5-0.5B-Instruct
+    hf_id: Qwen/Qwen2.5-0.5B-Instruct
+    directory: Qwen2.5-0.5B-Instruct
+    family: auto
+  llama32_1b:
+    name: Llama-3.2-1B-Instruct
+    hf_id: meta-llama/Llama-3.2-1B-Instruct
+    directory: Llama-3.2-1B-Instruct
+    family: auto
+  qwen35_2b:
+    name: Qwen3.5-2B
+    hf_id: Qwen/Qwen3.5-2B
+    directory: Qwen3.5-2B
+    family: auto
+  llama32_3b:
+    name: Llama-3.2-3B-Instruct
+    hf_id: meta-llama/Llama-3.2-3B-Instruct
+    directory: Llama-3.2-3B-Instruct
+    family: auto
+  qwen35_4b:
+    name: Qwen3.5-4B
+    hf_id: Qwen/Qwen3.5-4B
+    directory: Qwen3.5-4B
+    family: auto
+paths:
+  manifest: metadata/episodes.csv
+  aligned: data/aligned
+  cache: data/cache
+  static_cache: data/static
+  qa: data/qa
+  models: assets/models
+  vision: assets/encoders/resnet18.pt
+  speech: assets/encoders/whisper-tiny
+  outputs: outputs
+raw_roots:
+  Lee: data/raw/Lee
+  Lazizbek: data/raw/Lazizbek
+aligned_roots:
+- data/aligned
+runtime:
+  device: auto
+  dtype: bfloat16
+  threads: 2
+  devices: 1
+  gradient_checkpointing: false
+data:
+  episode_cache_size: 32
+  strict_snapshot: true
+network:
+  lora_rank: 16
+  ee_history: 16
+  ee_tokens: 1
+  qa_tokens: 16
+  position_loss_scale_m: 0.025
+training:
+  global_ee_batch: 256
+  global_qa_batch: 128
+  ee_micro_batch: 4
+  qa_micro_batch: 2
+  validation_batch: 4
+  lora_lr: 2.5e-05
+  encoder_head_lr: 5.0e-05
+  warmup_steps: 100
+  schedule_horizon: 6000
+  validation_every: 100
+  save_every_validation: true
+  action:
+    max_steps: 8000
+    minimum_steps: 2000
+    patience: 8
+    min_improvement: 0.01
+  qa:
+    max_steps: 4000
+    minimum_steps: 800
+    patience: 5
+    min_improvement: 0.002
+  joint_action:
+    joint_max_steps: 4000
+    joint_minimum_steps: 800
+    joint_patience: 5
+    joint_min_improvement: 0.002
+    balance_every: 100
+evaluation:
+  batch_size: 4
+  qa_max_tokens: 12
+  modality_ablations: true
+  geometry_penalty: false
+  history: 16

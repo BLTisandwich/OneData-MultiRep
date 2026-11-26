@@ -1,0 +1,4961 @@
+{
+  "snapshot": "aligned-final-v1",
+  "selection_scope": "Selected completed configurations; not a complete ablation table or a matched-budget model-size comparison.",
+  "execution_protocol": "Actual model actions, 96 steps, assisted kinematic simulation; task goal and required release; penetration diagnostic only.",
+  "qa_protocol": "Generated QA; full_matched; encoder-category macro accuracy. Separate QA-only checkpoint.",
+  "profiles": [
+    {
+      "model": "Qwen3.5-2B",
+      "execution_track": "joint_action",
+      "execution_phase_step": 5500,
+      "execution_checkpoint_sha256": "be9c6bbb0f8e215c1b4569ccb3c13b9b930321809f0ce40db1351de3a6ce5c4a",
+      "execution": {
+        "all": {
+          "episodes": 209,
+          "successes": 130,
+          "success_rate": 0.6220095693779905,
+          "episode_bootstrap_ci95": [
+            0.559688995215311,
+            0.6842105263157895
+          ],
+          "geometry_flags_diagnostic_only": 10
+        },
+        "test_iid": {
+          "episodes": 69,
+          "successes": 68,
+          "success_rate": 0.9855072463768116,
+          "episode_bootstrap_ci95": [
+            0.9565217391304348,
+            1.0
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T1": {
+          "episodes": 29,
+          "successes": 9,
+          "success_rate": 0.3103448275862069,
+          "episode_bootstrap_ci95": [
+            0.13793103448275862,
+            0.4827586206896552
+          ],
+          "geometry_flags_diagnostic_only": 6
+        },
+        "test_compositional": {
+          "episodes": 70,
+          "successes": 39,
+          "success_rate": 0.5571428571428572,
+          "episode_bootstrap_ci95": [
+            0.44285714285714284,
+            0.6714285714285714
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "test_visual_ood": {
+          "episodes": 70,
+          "successes": 23,
+          "success_rate": 0.32857142857142857,
+          "episode_bootstrap_ci95": [
+            0.21428571428571427,
+            0.44285714285714284
+          ],
+          "geometry_flags_diagnostic_only": 10
+        },
+        "T2": {
+          "episodes": 30,
+          "successes": 18,
+          "success_rate": 0.6,
+          "episode_bootstrap_ci95": [
+            0.43333333333333335,
+            0.7666666666666667
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T3": {
+          "episodes": 30,
+          "successes": 10,
+          "success_rate": 0.3333333333333333,
+          "episode_bootstrap_ci95": [
+            0.16666666666666666,
+            0.5
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T4": {
+          "episodes": 30,
+          "successes": 11,
+          "success_rate": 0.36666666666666664,
+          "episode_bootstrap_ci95": [
+            0.2,
+            0.5333333333333333
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T5": {
+          "episodes": 30,
+          "successes": 30,
+          "success_rate": 1.0,
+          "episode_bootstrap_ci95": [
+            1.0,
+            1.0
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T6": {
+          "episodes": 30,
+          "successes": 30,
+          "success_rate": 1.0,
+          "episode_bootstrap_ci95": [
+            1.0,
+            1.0
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T8": {
+          "episodes": 30,
+          "successes": 22,
+          "success_rate": 0.7333333333333333,
+          "episode_bootstrap_ci95": [
+            0.5666666666666667,
+            0.8666666666666667
+          ],
+          "geometry_flags_diagnostic_only": 4
+        }
+      },
+      "ee": {
+        "all": {
+          "frames": 18430,
+          "episodes": 194,
+          "absolute_target_mae_cm": 0.11377025341968937,
+          "delta_mae_cm": 0.11377025341968937,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.09854648403466156,
+            0.1293513642004883
+          ],
+          "next_observed_mae_cm": 0.11372780823797188,
+          "gripper_accuracy": 0.9763971785132936,
+          "gripper_open_f1": 0.982796124184299,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "test_compositional": {
+          "frames": 6365,
+          "episodes": 67,
+          "absolute_target_mae_cm": 0.1664288807897379,
+          "delta_mae_cm": 0.1664288807897379,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.1319321498734063,
+            0.20443357296364692
+          ],
+          "next_observed_mae_cm": 0.16637296631011544,
+          "gripper_accuracy": 0.9387274155538099,
+          "gripper_open_f1": 0.9533045977011494,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T1": {
+          "frames": 2280,
+          "episodes": 24,
+          "absolute_target_mae_cm": 0.21586815739967533,
+          "delta_mae_cm": 0.21586815739967533,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.16188941924919054,
+            0.26594789634412513
+          ],
+          "next_observed_mae_cm": 0.21580073217094953,
+          "gripper_accuracy": 0.9359649122807018,
+          "gripper_open_f1": 0.9232386961093586,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T2": {
+          "frames": 2660,
+          "episodes": 28,
+          "absolute_target_mae_cm": 0.0752140416625425,
+          "delta_mae_cm": 0.0752140416625425,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.052551204424808366,
+            0.09891518616414594
+          ],
+          "next_observed_mae_cm": 0.07523226311449592,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T3": {
+          "frames": 2565,
+          "episodes": 27,
+          "absolute_target_mae_cm": 0.1852797829501556,
+          "delta_mae_cm": 0.1852797829501556,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.13696047757035593,
+            0.23079601530978716
+          ],
+          "next_observed_mae_cm": 0.18523819706045078,
+          "gripper_accuracy": 0.946588693957115,
+          "gripper_open_f1": 0.9360112097150864,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T4": {
+          "frames": 2755,
+          "episodes": 29,
+          "absolute_target_mae_cm": 0.17235407034803973,
+          "delta_mae_cm": 0.17235407034803973,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.12803661803149546,
+            0.21392322131499777
+          ],
+          "next_observed_mae_cm": 0.17229024006172966,
+          "gripper_accuracy": 0.9499092558983666,
+          "gripper_open_f1": 0.9406196213425129,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T5": {
+          "frames": 2850,
+          "episodes": 30,
+          "absolute_target_mae_cm": 0.04929308242560774,
+          "delta_mae_cm": 0.04929308242560774,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.0377315476909239,
+            0.06095060198127676
+          ],
+          "next_observed_mae_cm": 0.049209916990479094,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T6": {
+          "frames": 2850,
+          "episodes": 30,
+          "absolute_target_mae_cm": 0.052395904831620946,
+          "delta_mae_cm": 0.052395904831620946,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.03855913554452434,
+            0.06653769048759427
+          ],
+          "next_observed_mae_cm": 0.052361939804906256,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T8": {
+          "frames": 2470,
+          "episodes": 26,
+          "absolute_target_mae_cm": 0.06665801622354338,
+          "delta_mae_cm": 0.06665801622354338,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.04644901078800964,
+            0.0875869547086862
+          ],
+          "next_observed_mae_cm": 0.06663345663746072,
+          "gripper_accuracy": 0.994331983805668,
+          "gripper_open_f1": 0.9936305732484076,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "test_iid": {
+          "frames": 5795,
+          "episodes": 61,
+          "absolute_target_mae_cm": 0.027251691018461026,
+          "delta_mae_cm": 0.027251691018461026,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.026461961098371182,
+            0.028070521209195815
+          ],
+          "next_observed_mae_cm": 0.027236557263401646,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "test_visual_ood": {
+          "frames": 6270,
+          "episodes": 66,
+          "absolute_target_mae_cm": 0.14027789391486634,
+          "delta_mae_cm": 0.14027789391486634,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.13330040640061597,
+            0.14778895590701838
+          ],
+          "next_observed_mae_cm": 0.14022387973214107,
+          "gripper_accuracy": 0.992822966507177,
+          "gripper_open_f1": 0.994848311390956,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        }
+      },
+      "qa_track": "qa",
+      "qa_phase_step": 2000,
+      "qa": {
+        "test_compositional/full_matched/all": {
+          "questions": 420,
+          "episodes": 67,
+          "micro_accuracy": 0.6261904761904762,
+          "encoder_macro_accuracy": 0.5837491121223886,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.49108068213368916,
+            0.6366281468935697
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.9850746268656716,
+            "proprio": 0.9701492537313433,
+            "mesh": 0.417910447761194,
+            "points": 0.19402985074626866,
+            "speech": 1.0,
+            "depth": 0.06896551724137931,
+            "timeseries": 0.21052631578947367,
+            "tactile": 0.625,
+            "impact": 0.6,
+            "flow": 0.6,
+            "force": 0.3333333333333333,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 67,
+            "proprio": 67,
+            "mesh": 67,
+            "points": 67,
+            "speech": 67,
+            "depth": 29,
+            "timeseries": 19,
+            "tactile": 8,
+            "impact": 5,
+            "flow": 5,
+            "force": 18,
+            "cross_modal": 1
+          },
+          "agrees_original_answer_fraction": 0.6261904761904762
+        },
+        "test_compositional/full_matched/T1": {
+          "questions": 51,
+          "episodes": 10,
+          "micro_accuracy": 0.7450980392156863,
+          "encoder_macro_accuracy": 0.6333333333333333,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5666666666666668,
+            0.8200000000000001
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.9,
+            "proprio": 1.0,
+            "mesh": 0.5,
+            "points": 0.4,
+            "speech": 1.0,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "proprio": 10,
+            "mesh": 10,
+            "points": 10,
+            "speech": 10,
+            "timeseries": 1
+          },
+          "agrees_original_answer_fraction": 0.7450980392156863
+        },
+        "test_compositional/full_matched/T2": {
+          "questions": 75,
+          "episodes": 9,
+          "micro_accuracy": 0.6,
+          "encoder_macro_accuracy": 0.6111111111111112,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.48675595238095243,
+            0.6818213383838383
+          ],
+          "per_encoder_accuracy": {
+            "depth": 0.2222222222222222,
+            "mesh": 0.5555555555555556,
+            "proprio": 1.0,
+            "timeseries": 0.3333333333333333,
+            "points": 0.2222222222222222,
+            "tactile": 0.6666666666666666,
+            "speech": 1.0,
+            "vision": 1.0,
+            "impact": 0.6666666666666666,
+            "flow": 0.5,
+            "force": 0.16666666666666666,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "depth": 9,
+            "mesh": 9,
+            "proprio": 9,
+            "timeseries": 6,
+            "points": 9,
+            "tactile": 3,
+            "speech": 9,
+            "vision": 9,
+            "impact": 3,
+            "flow": 2,
+            "force": 6,
+            "cross_modal": 1
+          },
+          "agrees_original_answer_fraction": 0.6
+        },
+        "test_compositional/full_matched/T3": {
+          "questions": 67,
+          "episodes": 10,
+          "micro_accuracy": 0.47761194029850745,
+          "encoder_macro_accuracy": 0.4,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.375,
+            0.4857142857142857
+          ],
+          "per_encoder_accuracy": {
+            "flow": 0.0,
+            "timeseries": 0.0,
+            "speech": 1.0,
+            "proprio": 0.9,
+            "points": 0.1,
+            "depth": 0.0,
+            "vision": 1.0,
+            "mesh": 0.2
+          },
+          "per_encoder_count": {
+            "flow": 1,
+            "timeseries": 6,
+            "speech": 10,
+            "proprio": 10,
+            "points": 10,
+            "depth": 10,
+            "vision": 10,
+            "mesh": 10
+          },
+          "agrees_original_answer_fraction": 0.47761194029850745
+        },
+        "test_compositional/full_matched/T4": {
+          "questions": 63,
+          "episodes": 10,
+          "micro_accuracy": 0.47619047619047616,
+          "encoder_macro_accuracy": 0.42857142857142855,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.38571428571428573,
+            0.4857142857142857
+          ],
+          "per_encoder_accuracy": {
+            "points": 0.0,
+            "vision": 1.0,
+            "mesh": 0.1,
+            "speech": 1.0,
+            "depth": 0.0,
+            "proprio": 0.9,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "points": 10,
+            "vision": 10,
+            "mesh": 10,
+            "speech": 10,
+            "depth": 10,
+            "proprio": 10,
+            "timeseries": 3
+          },
+          "agrees_original_answer_fraction": 0.47619047619047616
+        },
+        "test_compositional/full_matched/T5": {
+          "questions": 56,
+          "episodes": 10,
+          "micro_accuracy": 0.75,
+          "encoder_macro_accuracy": 0.76875,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6571428571428571,
+            0.8250446428571427
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "proprio": 1.0,
+            "mesh": 0.7,
+            "speech": 1.0,
+            "force": 0.25,
+            "points": 0.2,
+            "tactile": 1.0,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "proprio": 10,
+            "mesh": 10,
+            "speech": 10,
+            "force": 4,
+            "points": 10,
+            "tactile": 1,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.75
+        },
+        "test_compositional/full_matched/T6": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.7076923076923077,
+          "encoder_macro_accuracy": 0.7,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6036111111111112,
+            0.7813616071428571
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "proprio": 1.0,
+            "mesh": 0.6,
+            "points": 0.2,
+            "speech": 1.0,
+            "tactile": 0.5,
+            "force": 0.5,
+            "flow": 1.0,
+            "impact": 0.5
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "proprio": 10,
+            "mesh": 10,
+            "points": 10,
+            "speech": 10,
+            "tactile": 4,
+            "force": 8,
+            "flow": 1,
+            "impact": 2
+          },
+          "agrees_original_answer_fraction": 0.7076923076923077
+        },
+        "test_compositional/full_matched/T8": {
+          "questions": 43,
+          "episodes": 8,
+          "micro_accuracy": 0.6976744186046512,
+          "encoder_macro_accuracy": 0.6944444444444445,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5416666666666666,
+            0.8333333333333334
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.25,
+            "speech": 1.0,
+            "vision": 1.0,
+            "proprio": 1.0,
+            "points": 0.25,
+            "timeseries": 0.6666666666666666
+          },
+          "per_encoder_count": {
+            "mesh": 8,
+            "speech": 8,
+            "vision": 8,
+            "proprio": 8,
+            "points": 8,
+            "timeseries": 3
+          },
+          "agrees_original_answer_fraction": 0.6976744186046512
+        },
+        "test_iid/full_matched/all": {
+          "questions": 418,
+          "episodes": 61,
+          "micro_accuracy": 0.6961722488038278,
+          "encoder_macro_accuracy": 0.6773772765726719,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.616376243786236,
+            0.7451913657687464
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "proprio": 1.0,
+            "mesh": 0.32786885245901637,
+            "points": 0.2786885245901639,
+            "speech": 1.0,
+            "depth": 0.6923076923076923,
+            "tactile": 0.5625,
+            "cross_modal": 0.5,
+            "timeseries": 0.23529411764705882,
+            "force": 0.6857142857142857,
+            "impact": 0.8461538461538461,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 61,
+            "proprio": 61,
+            "mesh": 61,
+            "points": 61,
+            "speech": 61,
+            "depth": 26,
+            "tactile": 16,
+            "cross_modal": 2,
+            "timeseries": 17,
+            "force": 35,
+            "impact": 13,
+            "flow": 4
+          },
+          "agrees_original_answer_fraction": 0.6961722488038278
+        },
+        "test_iid/full_matched/T1": {
+          "questions": 30,
+          "episodes": 6,
+          "micro_accuracy": 0.7333333333333333,
+          "encoder_macro_accuracy": 0.7333333333333333,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6666666666666666,
+            0.8
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "proprio": 1.0,
+            "mesh": 0.16666666666666666,
+            "points": 0.5,
+            "speech": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 6,
+            "proprio": 6,
+            "mesh": 6,
+            "points": 6,
+            "speech": 6
+          },
+          "agrees_original_answer_fraction": 0.7333333333333333
+        },
+        "test_iid/full_matched/T2": {
+          "questions": 83,
+          "episodes": 9,
+          "micro_accuracy": 0.5903614457831325,
+          "encoder_macro_accuracy": 0.6046296296296295,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5416553932178931,
+            0.6412518037518037
+          ],
+          "per_encoder_accuracy": {
+            "speech": 1.0,
+            "proprio": 1.0,
+            "depth": 0.3333333333333333,
+            "points": 0.2222222222222222,
+            "tactile": 0.6666666666666666,
+            "cross_modal": 0.5,
+            "timeseries": 0.2,
+            "force": 0.3333333333333333,
+            "impact": 0.6666666666666666,
+            "vision": 1.0,
+            "mesh": 0.3333333333333333,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "speech": 9,
+            "proprio": 9,
+            "depth": 9,
+            "points": 9,
+            "tactile": 6,
+            "cross_modal": 2,
+            "timeseries": 5,
+            "force": 9,
+            "impact": 6,
+            "vision": 9,
+            "mesh": 9,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.5903614457831325
+        },
+        "test_iid/full_matched/T3": {
+          "questions": 53,
+          "episodes": 8,
+          "micro_accuracy": 0.6981132075471698,
+          "encoder_macro_accuracy": 0.703125,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5714285714285714,
+            0.8020833333333333
+          ],
+          "per_encoder_accuracy": {
+            "points": 0.125,
+            "depth": 0.875,
+            "timeseries": 0.25,
+            "speech": 1.0,
+            "proprio": 1.0,
+            "vision": 1.0,
+            "mesh": 0.375,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "points": 8,
+            "depth": 8,
+            "timeseries": 4,
+            "speech": 8,
+            "proprio": 8,
+            "vision": 8,
+            "mesh": 8,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.6981132075471698
+        },
+        "test_iid/full_matched/T4": {
+          "questions": 58,
+          "episodes": 9,
+          "micro_accuracy": 0.7068965517241379,
+          "encoder_macro_accuracy": 0.6507936507936508,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5714285714285714,
+            0.7301587301587302
+          ],
+          "per_encoder_accuracy": {
+            "speech": 1.0,
+            "vision": 1.0,
+            "mesh": 0.3333333333333333,
+            "depth": 0.8888888888888888,
+            "timeseries": 0.0,
+            "proprio": 1.0,
+            "points": 0.3333333333333333
+          },
+          "per_encoder_count": {
+            "speech": 9,
+            "vision": 9,
+            "mesh": 9,
+            "depth": 9,
+            "timeseries": 4,
+            "proprio": 9,
+            "points": 9
+          },
+          "agrees_original_answer_fraction": 0.7068965517241379
+        },
+        "test_iid/full_matched/T5": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.7846153846153846,
+          "encoder_macro_accuracy": 0.8129629629629629,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6966753472222222,
+            0.8875
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "proprio": 1.0,
+            "force": 0.75,
+            "mesh": 0.5,
+            "points": 0.4,
+            "speech": 1.0,
+            "tactile": 0.6666666666666666,
+            "flow": 1.0,
+            "impact": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "proprio": 10,
+            "force": 8,
+            "mesh": 10,
+            "points": 10,
+            "speech": 10,
+            "tactile": 3,
+            "flow": 1,
+            "impact": 3
+          },
+          "agrees_original_answer_fraction": 0.7846153846153846
+        },
+        "test_iid/full_matched/T6": {
+          "questions": 80,
+          "episodes": 10,
+          "micro_accuracy": 0.7625,
+          "encoder_macro_accuracy": 0.7846560846560846,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6847048611111112,
+            0.8555555555555555
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.4,
+            "force": 0.8333333333333334,
+            "points": 0.4,
+            "speech": 1.0,
+            "tactile": 0.42857142857142855,
+            "vision": 1.0,
+            "proprio": 1.0,
+            "impact": 1.0,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "mesh": 10,
+            "force": 18,
+            "points": 10,
+            "speech": 10,
+            "tactile": 7,
+            "vision": 10,
+            "proprio": 10,
+            "impact": 4,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.7625
+        },
+        "test_iid/full_matched/T8": {
+          "questions": 49,
+          "episodes": 9,
+          "micro_accuracy": 0.6122448979591837,
+          "encoder_macro_accuracy": 0.6018518518518519,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5185185185185185,
+            0.7037037037037037
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.1111111111111111,
+            "speech": 1.0,
+            "proprio": 1.0,
+            "vision": 1.0,
+            "points": 0.0,
+            "timeseries": 0.5
+          },
+          "per_encoder_count": {
+            "mesh": 9,
+            "speech": 9,
+            "proprio": 9,
+            "vision": 9,
+            "points": 9,
+            "timeseries": 4
+          },
+          "agrees_original_answer_fraction": 0.6122448979591837
+        },
+        "test_visual_ood/full_matched/all": {
+          "questions": 425,
+          "episodes": 66,
+          "micro_accuracy": 0.36470588235294116,
+          "encoder_macro_accuracy": 0.5367022026504785,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4946677493016744,
+            0.5656088868843538
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "proprio": 1.0,
+            "mesh": 0.30303030303030304,
+            "points": 0.2727272727272727,
+            "speech": 0.0,
+            "tactile": 1.0,
+            "force": 0.5555555555555556,
+            "flow": 1.0,
+            "timeseries": 0.21428571428571427,
+            "depth": 0.3448275862068966,
+            "impact": 0.75,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 66,
+            "proprio": 66,
+            "mesh": 66,
+            "points": 66,
+            "speech": 66,
+            "tactile": 9,
+            "force": 27,
+            "flow": 6,
+            "timeseries": 14,
+            "depth": 29,
+            "impact": 8,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.36470588235294116
+        },
+        "test_visual_ood/full_matched/T1": {
+          "questions": 40,
+          "episodes": 8,
+          "micro_accuracy": 0.275,
+          "encoder_macro_accuracy": 0.275,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.225,
+            0.35
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "proprio": 1.0,
+            "mesh": 0.125,
+            "points": 0.25,
+            "speech": 0.0
+          },
+          "per_encoder_count": {
+            "vision": 8,
+            "proprio": 8,
+            "mesh": 8,
+            "points": 8,
+            "speech": 8
+          },
+          "agrees_original_answer_fraction": 0.275
+        },
+        "test_visual_ood/full_matched/T2": {
+          "questions": 80,
+          "episodes": 10,
+          "micro_accuracy": 0.3875,
+          "encoder_macro_accuracy": 0.557142857142857,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.43316666666666664,
+            0.5909280303030303
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "mesh": 0.5,
+            "speech": 0.0,
+            "tactile": 1.0,
+            "force": 0.2857142857142857,
+            "flow": 1.0,
+            "timeseries": 1.0,
+            "depth": 0.0,
+            "proprio": 1.0,
+            "points": 0.3,
+            "impact": 0.6,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "mesh": 10,
+            "speech": 10,
+            "tactile": 3,
+            "force": 7,
+            "flow": 1,
+            "timeseries": 2,
+            "depth": 10,
+            "proprio": 10,
+            "points": 10,
+            "impact": 5,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.3875
+        },
+        "test_visual_ood/full_matched/T3": {
+          "questions": 61,
+          "episodes": 9,
+          "micro_accuracy": 0.3114754098360656,
+          "encoder_macro_accuracy": 0.3819444444444444,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.22222222222222224,
+            0.45833333333333326
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "mesh": 0.2222222222222222,
+            "depth": 0.4444444444444444,
+            "proprio": 1.0,
+            "points": 0.2222222222222222,
+            "timeseries": 0.16666666666666666,
+            "speech": 0.0,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 9,
+            "mesh": 9,
+            "depth": 9,
+            "proprio": 9,
+            "points": 9,
+            "timeseries": 6,
+            "speech": 9,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.3114754098360656
+        },
+        "test_visual_ood/full_matched/T4": {
+          "questions": 62,
+          "episodes": 10,
+          "micro_accuracy": 0.3387096774193548,
+          "encoder_macro_accuracy": 0.3,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.24285714285714285,
+            0.4000000000000001
+          ],
+          "per_encoder_accuracy": {
+            "points": 0.3,
+            "depth": 0.6,
+            "proprio": 1.0,
+            "timeseries": 0.0,
+            "speech": 0.0,
+            "vision": 0.0,
+            "mesh": 0.2
+          },
+          "per_encoder_count": {
+            "points": 10,
+            "depth": 10,
+            "proprio": 10,
+            "timeseries": 2,
+            "speech": 10,
+            "vision": 10,
+            "mesh": 10
+          },
+          "agrees_original_answer_fraction": 0.3387096774193548
+        },
+        "test_visual_ood/full_matched/T5": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.46153846153846156,
+          "encoder_macro_accuracy": 0.5625,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4714285714285714,
+            0.6
+          ],
+          "per_encoder_accuracy": {
+            "speech": 0.0,
+            "vision": 0.0,
+            "proprio": 1.0,
+            "mesh": 0.7,
+            "force": 0.5,
+            "points": 0.3,
+            "tactile": 1.0,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "speech": 10,
+            "vision": 10,
+            "proprio": 10,
+            "mesh": 10,
+            "force": 10,
+            "points": 10,
+            "tactile": 1,
+            "flow": 4
+          },
+          "agrees_original_answer_fraction": 0.46153846153846156
+        },
+        "test_visual_ood/full_matched/T6": {
+          "questions": 68,
+          "episodes": 10,
+          "micro_accuracy": 0.4264705882352941,
+          "encoder_macro_accuracy": 0.5125,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.475,
+            0.5375
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "proprio": 1.0,
+            "mesh": 0.1,
+            "points": 0.2,
+            "impact": 1.0,
+            "speech": 0.0,
+            "tactile": 1.0,
+            "force": 0.8
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "proprio": 10,
+            "mesh": 10,
+            "points": 10,
+            "impact": 3,
+            "speech": 10,
+            "tactile": 5,
+            "force": 10
+          },
+          "agrees_original_answer_fraction": 0.4264705882352941
+        },
+        "test_visual_ood/full_matched/T8": {
+          "questions": 49,
+          "episodes": 9,
+          "micro_accuracy": 0.2857142857142857,
+          "encoder_macro_accuracy": 0.25925925925925924,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.20370370370370372,
+            0.3333333333333333
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "timeseries": 0.0,
+            "points": 0.3333333333333333,
+            "speech": 0.0,
+            "proprio": 1.0,
+            "mesh": 0.2222222222222222
+          },
+          "per_encoder_count": {
+            "vision": 9,
+            "timeseries": 4,
+            "points": 9,
+            "speech": 9,
+            "proprio": 9,
+            "mesh": 9
+          },
+          "agrees_original_answer_fraction": 0.2857142857142857
+        }
+      },
+      "qa_checkpoint_sha256": "05ea8bb823c0bb2ec7b2d6c9d243ba9494f693e63c7d69fc49fab80e2367d208"
+    },
+    {
+      "model": "Llama-3.2-3B-Instruct",
+      "execution_track": "action",
+      "execution_phase_step": 4000,
+      "execution_checkpoint_sha256": "8c8a4b2326e6ec896fcf5121eb1542bba2e9c2a60d0c8de9502010ff49663ee7",
+      "execution": {
+        "all": {
+          "episodes": 209,
+          "successes": 112,
+          "success_rate": 0.5358851674641149,
+          "episode_bootstrap_ci95": [
+            0.46877990430622013,
+            0.6028708133971292
+          ],
+          "geometry_flags_diagnostic_only": 16
+        },
+        "test_iid": {
+          "episodes": 69,
+          "successes": 66,
+          "success_rate": 0.9565217391304348,
+          "episode_bootstrap_ci95": [
+            0.8985507246376812,
+            1.0
+          ],
+          "geometry_flags_diagnostic_only": 3
+        },
+        "T1": {
+          "episodes": 29,
+          "successes": 9,
+          "success_rate": 0.3103448275862069,
+          "episode_bootstrap_ci95": [
+            0.13793103448275862,
+            0.4827586206896552
+          ],
+          "geometry_flags_diagnostic_only": 2
+        },
+        "test_compositional": {
+          "episodes": 70,
+          "successes": 37,
+          "success_rate": 0.5285714285714286,
+          "episode_bootstrap_ci95": [
+            0.4142857142857143,
+            0.6571428571428571
+          ],
+          "geometry_flags_diagnostic_only": 4
+        },
+        "test_visual_ood": {
+          "episodes": 70,
+          "successes": 9,
+          "success_rate": 0.12857142857142856,
+          "episode_bootstrap_ci95": [
+            0.05714285714285714,
+            0.2
+          ],
+          "geometry_flags_diagnostic_only": 9
+        },
+        "T2": {
+          "episodes": 30,
+          "successes": 17,
+          "success_rate": 0.5666666666666667,
+          "episode_bootstrap_ci95": [
+            0.4,
+            0.7333333333333333
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T3": {
+          "episodes": 30,
+          "successes": 9,
+          "success_rate": 0.3,
+          "episode_bootstrap_ci95": [
+            0.13333333333333333,
+            0.4666666666666667
+          ],
+          "geometry_flags_diagnostic_only": 7
+        },
+        "T4": {
+          "episodes": 30,
+          "successes": 10,
+          "success_rate": 0.3333333333333333,
+          "episode_bootstrap_ci95": [
+            0.16666666666666666,
+            0.5
+          ],
+          "geometry_flags_diagnostic_only": 1
+        },
+        "T5": {
+          "episodes": 30,
+          "successes": 25,
+          "success_rate": 0.8333333333333334,
+          "episode_bootstrap_ci95": [
+            0.7,
+            0.9666666666666667
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T6": {
+          "episodes": 30,
+          "successes": 23,
+          "success_rate": 0.7666666666666667,
+          "episode_bootstrap_ci95": [
+            0.6333333333333333,
+            0.9
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T8": {
+          "episodes": 30,
+          "successes": 19,
+          "success_rate": 0.6333333333333333,
+          "episode_bootstrap_ci95": [
+            0.4666666666666667,
+            0.8
+          ],
+          "geometry_flags_diagnostic_only": 6
+        }
+      },
+      "ee": {
+        "all": {
+          "frames": 18430,
+          "episodes": 194,
+          "absolute_target_mae_cm": 0.12795560172635442,
+          "delta_mae_cm": 0.12795560172635442,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.11337888554631227,
+            0.1423994932384463
+          ],
+          "next_observed_mae_cm": 0.12796195003383629,
+          "gripper_accuracy": 0.9806294085729789,
+          "gripper_open_f1": 0.9859277070440301,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "test_compositional": {
+          "frames": 6365,
+          "episodes": 67,
+          "absolute_target_mae_cm": 0.15347125187939806,
+          "delta_mae_cm": 0.15347125187939806,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.12307535887236039,
+            0.18655961712586377
+          ],
+          "next_observed_mae_cm": 0.15345293755505163,
+          "gripper_accuracy": 0.9541241162608013,
+          "gripper_open_f1": 0.9654846335697399,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T1": {
+          "frames": 2280,
+          "episodes": 24,
+          "absolute_target_mae_cm": 0.21708996520886248,
+          "delta_mae_cm": 0.21708996520886248,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.1667455983517631,
+            0.26057685453814644
+          ],
+          "next_observed_mae_cm": 0.2170774742617811,
+          "gripper_accuracy": 0.9381578947368421,
+          "gripper_open_f1": 0.925984251968504,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T2": {
+          "frames": 2660,
+          "episodes": 28,
+          "absolute_target_mae_cm": 0.08296220306573168,
+          "delta_mae_cm": 0.08296220306573168,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.05890094030775827,
+            0.10840983693975703
+          ],
+          "next_observed_mae_cm": 0.08304176602549361,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T3": {
+          "frames": 2565,
+          "episodes": 27,
+          "absolute_target_mae_cm": 0.1870353435818832,
+          "delta_mae_cm": 0.1870353435818832,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.1475435749619571,
+            0.2225254767398158
+          ],
+          "next_observed_mae_cm": 0.1870121071980422,
+          "gripper_accuracy": 0.9567251461988304,
+          "gripper_open_f1": 0.9492455418381345,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T4": {
+          "frames": 2755,
+          "episodes": 29,
+          "absolute_target_mae_cm": 0.1786647354554344,
+          "delta_mae_cm": 0.1786647354554344,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.13861285985253724,
+            0.2132132019009716
+          ],
+          "next_observed_mae_cm": 0.17862765597823513,
+          "gripper_accuracy": 0.9666061705989111,
+          "gripper_open_f1": 0.9612468407750632,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T5": {
+          "frames": 2850,
+          "episodes": 30,
+          "absolute_target_mae_cm": 0.07497131947975344,
+          "delta_mae_cm": 0.07497131947975344,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.051822700642177984,
+            0.09803838620385719
+          ],
+          "next_observed_mae_cm": 0.07498372249276655,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T6": {
+          "frames": 2850,
+          "episodes": 30,
+          "absolute_target_mae_cm": 0.07182053634561925,
+          "delta_mae_cm": 0.07182053634561925,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.0498252719957075,
+            0.09373249897559115
+          ],
+          "next_observed_mae_cm": 0.071809989703378,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T8": {
+          "frames": 2470,
+          "episodes": 26,
+          "absolute_target_mae_cm": 0.10212686939922874,
+          "delta_mae_cm": 0.10212686939922874,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.06709230283234477,
+            0.1381157474154333
+          ],
+          "next_observed_mae_cm": 0.10216343046028378,
+          "gripper_accuracy": 0.9947368421052631,
+          "gripper_open_f1": 0.9940448923499771,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "test_iid": {
+          "frames": 5795,
+          "episodes": 61,
+          "absolute_target_mae_cm": 0.034253973061519394,
+          "delta_mae_cm": 0.034253973061519394,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.03286102299643476,
+            0.03562300798131436
+          ],
+          "next_observed_mae_cm": 0.03427130227722268,
+          "gripper_accuracy": 0.9987920621225194,
+          "gripper_open_f1": 0.9991454034916372,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "test_visual_ood": {
+          "frames": 6270,
+          "episodes": 66,
+          "absolute_target_mae_cm": 0.18865637124606677,
+          "delta_mae_cm": 0.18865637124606677,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.1829322184496403,
+            0.1946471093145557
+          ],
+          "next_observed_mae_cm": 0.1886776068403818,
+          "gripper_accuracy": 0.990749601275917,
+          "gripper_open_f1": 0.9933470979582473,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        }
+      },
+      "qa_track": "qa",
+      "qa_phase_step": 4000,
+      "qa": {
+        "test_compositional/full_matched/all": {
+          "questions": 420,
+          "episodes": 67,
+          "micro_accuracy": 0.611904761904762,
+          "encoder_macro_accuracy": 0.5776486906564174,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.47211457385329453,
+            0.6512835853611706
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.9850746268656716,
+            "proprio": 0.6417910447761194,
+            "mesh": 0.4626865671641791,
+            "points": 0.2537313432835821,
+            "speech": 1.0,
+            "depth": 0.41379310344827586,
+            "timeseries": 0.10526315789473684,
+            "tactile": 0.625,
+            "impact": 0.4,
+            "flow": 0.6,
+            "force": 0.4444444444444444,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 67,
+            "proprio": 67,
+            "mesh": 67,
+            "points": 67,
+            "speech": 67,
+            "depth": 29,
+            "timeseries": 19,
+            "tactile": 8,
+            "impact": 5,
+            "flow": 5,
+            "force": 18,
+            "cross_modal": 1
+          },
+          "agrees_original_answer_fraction": 0.611904761904762
+        },
+        "test_compositional/full_matched/T1": {
+          "questions": 51,
+          "episodes": 10,
+          "micro_accuracy": 0.5686274509803921,
+          "encoder_macro_accuracy": 0.4833333333333334,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4166666666666667,
+            0.6599999999999999
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "proprio": 0.3,
+            "mesh": 0.4,
+            "points": 0.2,
+            "speech": 1.0,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "proprio": 10,
+            "mesh": 10,
+            "points": 10,
+            "speech": 10,
+            "timeseries": 1
+          },
+          "agrees_original_answer_fraction": 0.5686274509803921
+        },
+        "test_compositional/full_matched/T2": {
+          "questions": 75,
+          "episodes": 9,
+          "micro_accuracy": 0.6266666666666667,
+          "encoder_macro_accuracy": 0.6620370370370371,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5288431186868687,
+            0.7332106782106781
+          ],
+          "per_encoder_accuracy": {
+            "depth": 0.2222222222222222,
+            "mesh": 0.7777777777777778,
+            "proprio": 0.8888888888888888,
+            "timeseries": 0.16666666666666666,
+            "points": 0.2222222222222222,
+            "tactile": 0.6666666666666666,
+            "speech": 1.0,
+            "vision": 1.0,
+            "impact": 0.6666666666666666,
+            "flow": 1.0,
+            "force": 0.3333333333333333,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "depth": 9,
+            "mesh": 9,
+            "proprio": 9,
+            "timeseries": 6,
+            "points": 9,
+            "tactile": 3,
+            "speech": 9,
+            "vision": 9,
+            "impact": 3,
+            "flow": 2,
+            "force": 6,
+            "cross_modal": 1
+          },
+          "agrees_original_answer_fraction": 0.6266666666666667
+        },
+        "test_compositional/full_matched/T3": {
+          "questions": 67,
+          "episodes": 10,
+          "micro_accuracy": 0.4925373134328358,
+          "encoder_macro_accuracy": 0.4125,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.36250000000000004,
+            0.5142857142857143
+          ],
+          "per_encoder_accuracy": {
+            "flow": 0.0,
+            "timeseries": 0.0,
+            "speech": 1.0,
+            "proprio": 0.3,
+            "points": 0.2,
+            "depth": 0.5,
+            "vision": 0.9,
+            "mesh": 0.4
+          },
+          "per_encoder_count": {
+            "flow": 1,
+            "timeseries": 6,
+            "speech": 10,
+            "proprio": 10,
+            "points": 10,
+            "depth": 10,
+            "vision": 10,
+            "mesh": 10
+          },
+          "agrees_original_answer_fraction": 0.4925373134328358
+        },
+        "test_compositional/full_matched/T4": {
+          "questions": 63,
+          "episodes": 10,
+          "micro_accuracy": 0.5079365079365079,
+          "encoder_macro_accuracy": 0.45714285714285713,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.38571428571428573,
+            0.5499999999999999
+          ],
+          "per_encoder_accuracy": {
+            "points": 0.2,
+            "vision": 1.0,
+            "mesh": 0.2,
+            "speech": 1.0,
+            "depth": 0.5,
+            "proprio": 0.3,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "points": 10,
+            "vision": 10,
+            "mesh": 10,
+            "speech": 10,
+            "depth": 10,
+            "proprio": 10,
+            "timeseries": 3
+          },
+          "agrees_original_answer_fraction": 0.5079365079365079
+        },
+        "test_compositional/full_matched/T5": {
+          "questions": 56,
+          "episodes": 10,
+          "micro_accuracy": 0.7678571428571429,
+          "encoder_macro_accuracy": 0.8,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.7142857142857143,
+            0.8428571428571429
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "proprio": 1.0,
+            "mesh": 0.6,
+            "speech": 1.0,
+            "force": 0.5,
+            "points": 0.3,
+            "tactile": 1.0,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "proprio": 10,
+            "mesh": 10,
+            "speech": 10,
+            "force": 4,
+            "points": 10,
+            "tactile": 1,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.7678571428571429
+        },
+        "test_compositional/full_matched/T6": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.6307692307692307,
+          "encoder_macro_accuracy": 0.5,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.43642857142857144,
+            0.7285714285714285
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "proprio": 0.8,
+            "mesh": 0.5,
+            "points": 0.2,
+            "speech": 1.0,
+            "tactile": 0.5,
+            "force": 0.5,
+            "flow": 0.0,
+            "impact": 0.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "proprio": 10,
+            "mesh": 10,
+            "points": 10,
+            "speech": 10,
+            "tactile": 4,
+            "force": 8,
+            "flow": 1,
+            "impact": 2
+          },
+          "agrees_original_answer_fraction": 0.6307692307692307
+        },
+        "test_compositional/full_matched/T8": {
+          "questions": 43,
+          "episodes": 8,
+          "micro_accuracy": 0.7441860465116279,
+          "encoder_macro_accuracy": 0.7013888888888888,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5625,
+            0.8482589285714285
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.375,
+            "speech": 1.0,
+            "vision": 1.0,
+            "proprio": 1.0,
+            "points": 0.5,
+            "timeseries": 0.3333333333333333
+          },
+          "per_encoder_count": {
+            "mesh": 8,
+            "speech": 8,
+            "vision": 8,
+            "proprio": 8,
+            "points": 8,
+            "timeseries": 3
+          },
+          "agrees_original_answer_fraction": 0.7441860465116279
+        },
+        "test_iid/full_matched/all": {
+          "questions": 418,
+          "episodes": 61,
+          "micro_accuracy": 0.715311004784689,
+          "encoder_macro_accuracy": 0.7123461458984602,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6321877732358288,
+            0.7751594641845444
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "proprio": 0.9672131147540983,
+            "mesh": 0.47540983606557374,
+            "points": 0.29508196721311475,
+            "speech": 0.9836065573770492,
+            "depth": 0.6153846153846154,
+            "tactile": 0.625,
+            "cross_modal": 1.0,
+            "timeseries": 0.35294117647058826,
+            "force": 0.7142857142857143,
+            "impact": 0.7692307692307693,
+            "flow": 0.75
+          },
+          "per_encoder_count": {
+            "vision": 61,
+            "proprio": 61,
+            "mesh": 61,
+            "points": 61,
+            "speech": 61,
+            "depth": 26,
+            "tactile": 16,
+            "cross_modal": 2,
+            "timeseries": 17,
+            "force": 35,
+            "impact": 13,
+            "flow": 4
+          },
+          "agrees_original_answer_fraction": 0.715311004784689
+        },
+        "test_iid/full_matched/T1": {
+          "questions": 30,
+          "episodes": 6,
+          "micro_accuracy": 0.7333333333333333,
+          "encoder_macro_accuracy": 0.7333333333333334,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6666666666666666,
+            0.8
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "proprio": 0.8333333333333334,
+            "mesh": 0.3333333333333333,
+            "points": 0.5,
+            "speech": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 6,
+            "proprio": 6,
+            "mesh": 6,
+            "points": 6,
+            "speech": 6
+          },
+          "agrees_original_answer_fraction": 0.7333333333333333
+        },
+        "test_iid/full_matched/T2": {
+          "questions": 83,
+          "episodes": 9,
+          "micro_accuracy": 0.5903614457831325,
+          "encoder_macro_accuracy": 0.637037037037037,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4970000327954874,
+            0.7477099867724867
+          ],
+          "per_encoder_accuracy": {
+            "speech": 1.0,
+            "proprio": 0.8888888888888888,
+            "depth": 0.3333333333333333,
+            "points": 0.2222222222222222,
+            "tactile": 0.6666666666666666,
+            "cross_modal": 1.0,
+            "timeseries": 0.2,
+            "force": 0.3333333333333333,
+            "impact": 0.6666666666666666,
+            "vision": 1.0,
+            "mesh": 0.3333333333333333,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "speech": 9,
+            "proprio": 9,
+            "depth": 9,
+            "points": 9,
+            "tactile": 6,
+            "cross_modal": 2,
+            "timeseries": 5,
+            "force": 9,
+            "impact": 6,
+            "vision": 9,
+            "mesh": 9,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.5903614457831325
+        },
+        "test_iid/full_matched/T3": {
+          "questions": 53,
+          "episodes": 8,
+          "micro_accuracy": 0.8301886792452831,
+          "encoder_macro_accuracy": 0.796875,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6785714285714286,
+            0.859375
+          ],
+          "per_encoder_accuracy": {
+            "points": 0.75,
+            "depth": 0.875,
+            "timeseries": 0.0,
+            "speech": 1.0,
+            "proprio": 1.0,
+            "vision": 1.0,
+            "mesh": 0.75,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "points": 8,
+            "depth": 8,
+            "timeseries": 4,
+            "speech": 8,
+            "proprio": 8,
+            "vision": 8,
+            "mesh": 8,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.8301886792452831
+        },
+        "test_iid/full_matched/T4": {
+          "questions": 58,
+          "episodes": 9,
+          "micro_accuracy": 0.6896551724137931,
+          "encoder_macro_accuracy": 0.6746031746031745,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5555555555555556,
+            0.7936507936507936
+          ],
+          "per_encoder_accuracy": {
+            "speech": 1.0,
+            "vision": 1.0,
+            "mesh": 0.4444444444444444,
+            "depth": 0.6666666666666666,
+            "timeseries": 0.5,
+            "proprio": 1.0,
+            "points": 0.1111111111111111
+          },
+          "per_encoder_count": {
+            "speech": 9,
+            "vision": 9,
+            "mesh": 9,
+            "depth": 9,
+            "timeseries": 4,
+            "proprio": 9,
+            "points": 9
+          },
+          "agrees_original_answer_fraction": 0.6896551724137931
+        },
+        "test_iid/full_matched/T5": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.7692307692307693,
+          "encoder_macro_accuracy": 0.8046296296296297,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.7041666666666666,
+            0.875
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "proprio": 1.0,
+            "force": 0.875,
+            "mesh": 0.7,
+            "points": 0.1,
+            "speech": 0.9,
+            "tactile": 0.6666666666666666,
+            "flow": 1.0,
+            "impact": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "proprio": 10,
+            "force": 8,
+            "mesh": 10,
+            "points": 10,
+            "speech": 10,
+            "tactile": 3,
+            "flow": 1,
+            "impact": 3
+          },
+          "agrees_original_answer_fraction": 0.7692307692307693
+        },
+        "test_iid/full_matched/T6": {
+          "questions": 80,
+          "episodes": 10,
+          "micro_accuracy": 0.7375,
+          "encoder_macro_accuracy": 0.6505291005291005,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5975815696649031,
+            0.7734765625
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.4,
+            "force": 0.8333333333333334,
+            "points": 0.3,
+            "speech": 1.0,
+            "tactile": 0.5714285714285714,
+            "vision": 1.0,
+            "proprio": 1.0,
+            "impact": 0.75,
+            "flow": 0.0
+          },
+          "per_encoder_count": {
+            "mesh": 10,
+            "force": 18,
+            "points": 10,
+            "speech": 10,
+            "tactile": 7,
+            "vision": 10,
+            "proprio": 10,
+            "impact": 4,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.7375
+        },
+        "test_iid/full_matched/T8": {
+          "questions": 49,
+          "episodes": 9,
+          "micro_accuracy": 0.7142857142857143,
+          "encoder_macro_accuracy": 0.7175925925925926,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6296296296296297,
+            0.7962962962962963
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.3333333333333333,
+            "speech": 1.0,
+            "proprio": 1.0,
+            "vision": 1.0,
+            "points": 0.2222222222222222,
+            "timeseries": 0.75
+          },
+          "per_encoder_count": {
+            "mesh": 9,
+            "speech": 9,
+            "proprio": 9,
+            "vision": 9,
+            "points": 9,
+            "timeseries": 4
+          },
+          "agrees_original_answer_fraction": 0.7142857142857143
+        },
+        "test_visual_ood/full_matched/all": {
+          "questions": 425,
+          "episodes": 66,
+          "micro_accuracy": 0.16705882352941176,
+          "encoder_macro_accuracy": 0.20520717575315275,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.1586915362974725,
+            0.27467554644483216
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "proprio": 0.3787878787878788,
+            "mesh": 0.13636363636363635,
+            "points": 0.19696969696969696,
+            "speech": 0.0,
+            "tactile": 0.1111111111111111,
+            "force": 0.37037037037037035,
+            "flow": 0.6666666666666666,
+            "timeseries": 0.21428571428571427,
+            "depth": 0.13793103448275862,
+            "impact": 0.25,
+            "cross_modal": 0.0
+          },
+          "per_encoder_count": {
+            "vision": 66,
+            "proprio": 66,
+            "mesh": 66,
+            "points": 66,
+            "speech": 66,
+            "tactile": 9,
+            "force": 27,
+            "flow": 6,
+            "timeseries": 14,
+            "depth": 29,
+            "impact": 8,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.16705882352941176
+        },
+        "test_visual_ood/full_matched/T1": {
+          "questions": 40,
+          "episodes": 8,
+          "micro_accuracy": 0.125,
+          "encoder_macro_accuracy": 0.125,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.05,
+            0.175
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "proprio": 0.375,
+            "mesh": 0.25,
+            "points": 0.0,
+            "speech": 0.0
+          },
+          "per_encoder_count": {
+            "vision": 8,
+            "proprio": 8,
+            "mesh": 8,
+            "points": 8,
+            "speech": 8
+          },
+          "agrees_original_answer_fraction": 0.125
+        },
+        "test_visual_ood/full_matched/T2": {
+          "questions": 80,
+          "episodes": 10,
+          "micro_accuracy": 0.1875,
+          "encoder_macro_accuracy": 0.21071428571428572,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.11818181818181818,
+            0.24170454545454545
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "mesh": 0.5,
+            "speech": 0.0,
+            "tactile": 0.0,
+            "force": 0.42857142857142855,
+            "flow": 1.0,
+            "timeseries": 0.0,
+            "depth": 0.0,
+            "proprio": 0.3,
+            "points": 0.3,
+            "impact": 0.0,
+            "cross_modal": 0.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "mesh": 10,
+            "speech": 10,
+            "tactile": 3,
+            "force": 7,
+            "flow": 1,
+            "timeseries": 2,
+            "depth": 10,
+            "proprio": 10,
+            "points": 10,
+            "impact": 5,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.1875
+        },
+        "test_visual_ood/full_matched/T3": {
+          "questions": 61,
+          "episodes": 9,
+          "micro_accuracy": 0.22950819672131148,
+          "encoder_macro_accuracy": 0.20833333333333331,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.15871155753968255,
+            0.3174603174603174
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "mesh": 0.1111111111111111,
+            "depth": 0.1111111111111111,
+            "proprio": 0.7777777777777778,
+            "points": 0.3333333333333333,
+            "timeseries": 0.3333333333333333,
+            "speech": 0.0,
+            "flow": 0.0
+          },
+          "per_encoder_count": {
+            "vision": 9,
+            "mesh": 9,
+            "depth": 9,
+            "proprio": 9,
+            "points": 9,
+            "timeseries": 6,
+            "speech": 9,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.22950819672131148
+        },
+        "test_visual_ood/full_matched/T4": {
+          "questions": 62,
+          "episodes": 10,
+          "micro_accuracy": 0.14516129032258066,
+          "encoder_macro_accuracy": 0.18571428571428572,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.09964285714285716,
+            0.2857142857142857
+          ],
+          "per_encoder_accuracy": {
+            "points": 0.2,
+            "depth": 0.3,
+            "proprio": 0.3,
+            "timeseries": 0.5,
+            "speech": 0.0,
+            "vision": 0.0,
+            "mesh": 0.0
+          },
+          "per_encoder_count": {
+            "points": 10,
+            "depth": 10,
+            "proprio": 10,
+            "timeseries": 2,
+            "speech": 10,
+            "vision": 10,
+            "mesh": 10
+          },
+          "agrees_original_answer_fraction": 0.14516129032258066
+        },
+        "test_visual_ood/full_matched/T5": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.16923076923076924,
+          "encoder_macro_accuracy": 0.30625,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.14285714285714285,
+            0.36875
+          ],
+          "per_encoder_accuracy": {
+            "speech": 0.0,
+            "vision": 0.0,
+            "proprio": 0.1,
+            "mesh": 0.0,
+            "force": 0.4,
+            "points": 0.2,
+            "tactile": 1.0,
+            "flow": 0.75
+          },
+          "per_encoder_count": {
+            "speech": 10,
+            "vision": 10,
+            "proprio": 10,
+            "mesh": 10,
+            "force": 10,
+            "points": 10,
+            "tactile": 1,
+            "flow": 4
+          },
+          "agrees_original_answer_fraction": 0.16923076923076924
+        },
+        "test_visual_ood/full_matched/T6": {
+          "questions": 68,
+          "episodes": 10,
+          "micro_accuracy": 0.1323529411764706,
+          "encoder_macro_accuracy": 0.17083333333333334,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.05261160714285714,
+            0.2719531249999999
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "proprio": 0.2,
+            "mesh": 0.0,
+            "points": 0.2,
+            "impact": 0.6666666666666666,
+            "speech": 0.0,
+            "tactile": 0.0,
+            "force": 0.3
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "proprio": 10,
+            "mesh": 10,
+            "points": 10,
+            "impact": 3,
+            "speech": 10,
+            "tactile": 5,
+            "force": 10
+          },
+          "agrees_original_answer_fraction": 0.1323529411764706
+        },
+        "test_visual_ood/full_matched/T8": {
+          "questions": 49,
+          "episodes": 9,
+          "micro_accuracy": 0.16326530612244897,
+          "encoder_macro_accuracy": 0.14814814814814814,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.0925925925925926,
+            0.20370370370370372
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "timeseries": 0.0,
+            "points": 0.1111111111111111,
+            "speech": 0.0,
+            "proprio": 0.6666666666666666,
+            "mesh": 0.1111111111111111
+          },
+          "per_encoder_count": {
+            "vision": 9,
+            "timeseries": 4,
+            "points": 9,
+            "speech": 9,
+            "proprio": 9,
+            "mesh": 9
+          },
+          "agrees_original_answer_fraction": 0.16326530612244897
+        }
+      },
+      "qa_checkpoint_sha256": "771744dbb6c4ca604a169fcf8dbdfe77c71f045b0cc5ab92035272856775ee9e"
+    },
+    {
+      "model": "Qwen3.5-4B",
+      "execution_track": "action",
+      "execution_phase_step": 5800,
+      "execution_checkpoint_sha256": "739421f673d559b20b1faf57438977d99bd145035f587705e2521f906583a0ba",
+      "execution": {
+        "all": {
+          "episodes": 209,
+          "successes": 126,
+          "success_rate": 0.6028708133971292,
+          "episode_bootstrap_ci95": [
+            0.5358851674641149,
+            0.6698564593301436
+          ],
+          "geometry_flags_diagnostic_only": 9
+        },
+        "test_iid": {
+          "episodes": 69,
+          "successes": 69,
+          "success_rate": 1.0,
+          "episode_bootstrap_ci95": [
+            1.0,
+            1.0
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T1": {
+          "episodes": 29,
+          "successes": 9,
+          "success_rate": 0.3103448275862069,
+          "episode_bootstrap_ci95": [
+            0.13793103448275862,
+            0.4827586206896552
+          ],
+          "geometry_flags_diagnostic_only": 9
+        },
+        "test_compositional": {
+          "episodes": 70,
+          "successes": 38,
+          "success_rate": 0.5428571428571428,
+          "episode_bootstrap_ci95": [
+            0.42857142857142855,
+            0.6571428571428571
+          ],
+          "geometry_flags_diagnostic_only": 9
+        },
+        "test_visual_ood": {
+          "episodes": 70,
+          "successes": 19,
+          "success_rate": 0.2714285714285714,
+          "episode_bootstrap_ci95": [
+            0.17142857142857143,
+            0.38571428571428573
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T2": {
+          "episodes": 30,
+          "successes": 24,
+          "success_rate": 0.8,
+          "episode_bootstrap_ci95": [
+            0.6333333333333333,
+            0.9333333333333333
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T3": {
+          "episodes": 30,
+          "successes": 10,
+          "success_rate": 0.3333333333333333,
+          "episode_bootstrap_ci95": [
+            0.16666666666666666,
+            0.5
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T4": {
+          "episodes": 30,
+          "successes": 10,
+          "success_rate": 0.3333333333333333,
+          "episode_bootstrap_ci95": [
+            0.16666666666666666,
+            0.5
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T5": {
+          "episodes": 30,
+          "successes": 25,
+          "success_rate": 0.8333333333333334,
+          "episode_bootstrap_ci95": [
+            0.7,
+            0.9333333333333333
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T6": {
+          "episodes": 30,
+          "successes": 28,
+          "success_rate": 0.9333333333333333,
+          "episode_bootstrap_ci95": [
+            0.8333333333333334,
+            1.0
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T8": {
+          "episodes": 30,
+          "successes": 20,
+          "success_rate": 0.6666666666666666,
+          "episode_bootstrap_ci95": [
+            0.5,
+            0.8333333333333334
+          ],
+          "geometry_flags_diagnostic_only": 0
+        }
+      },
+      "ee": {
+        "all": {
+          "frames": 18430,
+          "episodes": 194,
+          "absolute_target_mae_cm": 0.09217201921214421,
+          "delta_mae_cm": 0.09217201921214421,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.07947430728260613,
+            0.10469141310553218
+          ],
+          "next_observed_mae_cm": 0.09215315369255205,
+          "gripper_accuracy": 0.9782419967444385,
+          "gripper_open_f1": 0.9842094900570979,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "test_compositional": {
+          "frames": 6365,
+          "episodes": 67,
+          "absolute_target_mae_cm": 0.1347042312658848,
+          "delta_mae_cm": 0.1347042312658848,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.10610423023788194,
+            0.16645529071023452
+          ],
+          "next_observed_mae_cm": 0.13465684640116313,
+          "gripper_accuracy": 0.9413982717989002,
+          "gripper_open_f1": 0.9558945252453589,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T1": {
+          "frames": 2280,
+          "episodes": 24,
+          "absolute_target_mae_cm": 0.17403932310254802,
+          "delta_mae_cm": 0.17403932310254802,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.12629091682757318,
+            0.22125602269429806
+          ],
+          "next_observed_mae_cm": 0.17398129715962057,
+          "gripper_accuracy": 0.9425438596491228,
+          "gripper_open_f1": 0.9320186818889465,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T2": {
+          "frames": 2660,
+          "episodes": 28,
+          "absolute_target_mae_cm": 0.07147966003644146,
+          "delta_mae_cm": 0.07147966003644146,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.04896245264567813,
+            0.09507399938323993
+          ],
+          "next_observed_mae_cm": 0.07154655084272153,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T3": {
+          "frames": 2565,
+          "episodes": 27,
+          "absolute_target_mae_cm": 0.1343032792436602,
+          "delta_mae_cm": 0.1343032792436602,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.09866514923975063,
+            0.16869101333356556
+          ],
+          "next_observed_mae_cm": 0.13422417690574426,
+          "gripper_accuracy": 0.9524366471734893,
+          "gripper_open_f1": 0.9439853076216712,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T4": {
+          "frames": 2755,
+          "episodes": 29,
+          "absolute_target_mae_cm": 0.13095494350207168,
+          "delta_mae_cm": 0.13095494350207168,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.0967165240633429,
+            0.16507909861494685
+          ],
+          "next_observed_mae_cm": 0.13087308433391964,
+          "gripper_accuracy": 0.949546279491833,
+          "gripper_open_f1": 0.9415720891130728,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T5": {
+          "frames": 2850,
+          "episodes": 30,
+          "absolute_target_mae_cm": 0.04788224504864366,
+          "delta_mae_cm": 0.04788224504864366,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.034476854327272655,
+            0.0611960451736609
+          ],
+          "next_observed_mae_cm": 0.047889623590377406,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T6": {
+          "frames": 2850,
+          "episodes": 30,
+          "absolute_target_mae_cm": 0.0454258359699171,
+          "delta_mae_cm": 0.0454258359699171,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.033017118737391056,
+            0.05841668585354075
+          ],
+          "next_observed_mae_cm": 0.04544212943490333,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T8": {
+          "frames": 2470,
+          "episodes": 26,
+          "absolute_target_mae_cm": 0.05691819846072056,
+          "delta_mae_cm": 0.05691819846072056,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.04003484221384813,
+            0.07533421531477039
+          ],
+          "next_observed_mae_cm": 0.056905094155031234,
+          "gripper_accuracy": 0.9963562753036437,
+          "gripper_open_f1": 0.9958922866271109,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "test_iid": {
+          "frames": 5795,
+          "episodes": 61,
+          "absolute_target_mae_cm": 0.023407161318861967,
+          "delta_mae_cm": 0.023407161318861967,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.022546120080752234,
+            0.024327770192942372
+          ],
+          "next_observed_mae_cm": 0.02342869871871737,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "test_visual_ood": {
+          "frames": 6270,
+          "episodes": 66,
+          "absolute_target_mae_cm": 0.11255077866501689,
+          "delta_mae_cm": 0.11255077866501689,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.10770389814306894,
+            0.11804496111343074
+          ],
+          "next_observed_mae_cm": 0.11252352250962737,
+          "gripper_accuracy": 0.9955342902711324,
+          "gripper_open_f1": 0.9967963386727688,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        }
+      },
+      "qa_track": "qa",
+      "qa_phase_step": 800,
+      "qa": {
+        "test_compositional/full_matched/all": {
+          "questions": 420,
+          "episodes": 67,
+          "micro_accuracy": 0.638095238095238,
+          "encoder_macro_accuracy": 0.6141534275085553,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5320159656946313,
+            0.6607830450418521
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "speech": 1.0,
+            "points": 0.3582089552238806,
+            "proprio": 0.7014925373134329,
+            "tactile": 0.625,
+            "flow": 0.6,
+            "mesh": 0.5074626865671642,
+            "force": 0.5,
+            "impact": 0.8,
+            "depth": 0.1724137931034483,
+            "timeseries": 0.10526315789473684,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 67,
+            "speech": 67,
+            "points": 67,
+            "proprio": 67,
+            "tactile": 8,
+            "flow": 5,
+            "mesh": 67,
+            "force": 18,
+            "impact": 5,
+            "depth": 29,
+            "timeseries": 19,
+            "cross_modal": 1
+          },
+          "agrees_original_answer_fraction": 0.638095238095238
+        },
+        "test_compositional/full_matched/T1": {
+          "questions": 51,
+          "episodes": 10,
+          "micro_accuracy": 0.7058823529411765,
+          "encoder_macro_accuracy": 0.6,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5333333333333333,
+            0.8
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "speech": 1.0,
+            "points": 0.5,
+            "mesh": 0.3,
+            "proprio": 0.8,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "speech": 10,
+            "points": 10,
+            "mesh": 10,
+            "proprio": 10,
+            "timeseries": 1
+          },
+          "agrees_original_answer_fraction": 0.7058823529411765
+        },
+        "test_compositional/full_matched/T2": {
+          "questions": 75,
+          "episodes": 9,
+          "micro_accuracy": 0.5866666666666667,
+          "encoder_macro_accuracy": 0.6064814814814815,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4970701058201058,
+            0.6681314634439635
+          ],
+          "per_encoder_accuracy": {
+            "proprio": 0.7777777777777778,
+            "tactile": 0.6666666666666666,
+            "points": 0.3333333333333333,
+            "impact": 0.6666666666666666,
+            "vision": 1.0,
+            "mesh": 0.6666666666666666,
+            "force": 0.3333333333333333,
+            "depth": 0.0,
+            "speech": 1.0,
+            "flow": 0.5,
+            "cross_modal": 1.0,
+            "timeseries": 0.3333333333333333
+          },
+          "per_encoder_count": {
+            "proprio": 9,
+            "tactile": 3,
+            "points": 9,
+            "impact": 3,
+            "vision": 9,
+            "mesh": 9,
+            "force": 6,
+            "depth": 9,
+            "speech": 9,
+            "flow": 2,
+            "cross_modal": 1,
+            "timeseries": 6
+          },
+          "agrees_original_answer_fraction": 0.5866666666666667
+        },
+        "test_compositional/full_matched/T3": {
+          "questions": 67,
+          "episodes": 10,
+          "micro_accuracy": 0.6119402985074627,
+          "encoder_macro_accuracy": 0.5125,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.42500000000000004,
+            0.6714285714285715
+          ],
+          "per_encoder_accuracy": {
+            "flow": 0.0,
+            "points": 0.5,
+            "vision": 1.0,
+            "mesh": 0.5,
+            "proprio": 0.6,
+            "speech": 1.0,
+            "depth": 0.5,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "flow": 1,
+            "points": 10,
+            "vision": 10,
+            "mesh": 10,
+            "proprio": 10,
+            "speech": 10,
+            "depth": 10,
+            "timeseries": 6
+          },
+          "agrees_original_answer_fraction": 0.6119402985074627
+        },
+        "test_compositional/full_matched/T4": {
+          "questions": 63,
+          "episodes": 10,
+          "micro_accuracy": 0.5238095238095238,
+          "encoder_macro_accuracy": 0.4714285714285714,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.38571428571428573,
+            0.5666666666666667
+          ],
+          "per_encoder_accuracy": {
+            "speech": 1.0,
+            "proprio": 0.4,
+            "vision": 1.0,
+            "points": 0.6,
+            "depth": 0.0,
+            "mesh": 0.3,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "speech": 10,
+            "proprio": 10,
+            "vision": 10,
+            "points": 10,
+            "depth": 10,
+            "mesh": 10,
+            "timeseries": 3
+          },
+          "agrees_original_answer_fraction": 0.5238095238095238
+        },
+        "test_compositional/full_matched/T5": {
+          "questions": 56,
+          "episodes": 10,
+          "micro_accuracy": 0.8214285714285714,
+          "encoder_macro_accuracy": 0.85625,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.7857142857142858,
+            0.9
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "force": 0.75,
+            "proprio": 0.9,
+            "tactile": 1.0,
+            "speech": 1.0,
+            "mesh": 0.8,
+            "flow": 1.0,
+            "points": 0.4
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "force": 4,
+            "proprio": 10,
+            "tactile": 1,
+            "speech": 10,
+            "mesh": 10,
+            "flow": 1,
+            "points": 10
+          },
+          "agrees_original_answer_fraction": 0.8214285714285714
+        },
+        "test_compositional/full_matched/T6": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.7384615384615385,
+          "encoder_macro_accuracy": 0.7666666666666667,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6874553571428571,
+            0.8407407407407407
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.9,
+            "speech": 1.0,
+            "points": 0.0,
+            "tactile": 0.5,
+            "proprio": 1.0,
+            "impact": 1.0,
+            "vision": 1.0,
+            "force": 0.5,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "mesh": 10,
+            "speech": 10,
+            "points": 10,
+            "tactile": 4,
+            "proprio": 10,
+            "impact": 2,
+            "vision": 10,
+            "force": 8,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.7384615384615385
+        },
+        "test_compositional/full_matched/T8": {
+          "questions": 43,
+          "episodes": 8,
+          "micro_accuracy": 0.46511627906976744,
+          "encoder_macro_accuracy": 0.4166666666666667,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.3541666666666667,
+            0.4791666666666667
+          ],
+          "per_encoder_accuracy": {
+            "speech": 1.0,
+            "points": 0.125,
+            "mesh": 0.0,
+            "vision": 1.0,
+            "timeseries": 0.0,
+            "proprio": 0.375
+          },
+          "per_encoder_count": {
+            "speech": 8,
+            "points": 8,
+            "mesh": 8,
+            "vision": 8,
+            "timeseries": 3,
+            "proprio": 8
+          },
+          "agrees_original_answer_fraction": 0.46511627906976744
+        },
+        "test_iid/full_matched/all": {
+          "questions": 418,
+          "episodes": 61,
+          "micro_accuracy": 0.6363636363636364,
+          "encoder_macro_accuracy": 0.665887538811237,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6088516638894992,
+            0.710607175944322
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "speech": 1.0,
+            "points": 0.22950819672131148,
+            "proprio": 0.7377049180327869,
+            "force": 0.6285714285714286,
+            "mesh": 0.3770491803278688,
+            "impact": 0.7692307692307693,
+            "depth": 0.38461538461538464,
+            "timeseries": 0.17647058823529413,
+            "flow": 1.0,
+            "tactile": 0.6875,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 61,
+            "speech": 61,
+            "points": 61,
+            "proprio": 61,
+            "force": 35,
+            "mesh": 61,
+            "impact": 13,
+            "depth": 26,
+            "timeseries": 17,
+            "flow": 4,
+            "tactile": 16,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.6363636363636364
+        },
+        "test_iid/full_matched/T1": {
+          "questions": 30,
+          "episodes": 6,
+          "micro_accuracy": 0.6333333333333333,
+          "encoder_macro_accuracy": 0.6333333333333333,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5,
+            0.7666666666666667
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "speech": 1.0,
+            "points": 0.3333333333333333,
+            "mesh": 0.16666666666666666,
+            "proprio": 0.6666666666666666
+          },
+          "per_encoder_count": {
+            "vision": 6,
+            "speech": 6,
+            "points": 6,
+            "mesh": 6,
+            "proprio": 6
+          },
+          "agrees_original_answer_fraction": 0.6333333333333333
+        },
+        "test_iid/full_matched/T2": {
+          "questions": 83,
+          "episodes": 9,
+          "micro_accuracy": 0.4939759036144578,
+          "encoder_macro_accuracy": 0.5675925925925925,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4367918771043771,
+            0.6475792147667147
+          ],
+          "per_encoder_accuracy": {
+            "speech": 1.0,
+            "points": 0.3333333333333333,
+            "proprio": 0.2222222222222222,
+            "force": 0.2222222222222222,
+            "mesh": 0.2222222222222222,
+            "impact": 0.6666666666666666,
+            "vision": 1.0,
+            "depth": 0.1111111111111111,
+            "tactile": 0.8333333333333334,
+            "flow": 1.0,
+            "timeseries": 0.2,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "speech": 9,
+            "points": 9,
+            "proprio": 9,
+            "force": 9,
+            "mesh": 9,
+            "impact": 6,
+            "vision": 9,
+            "depth": 9,
+            "tactile": 6,
+            "flow": 1,
+            "timeseries": 5,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.4939759036144578
+        },
+        "test_iid/full_matched/T3": {
+          "questions": 53,
+          "episodes": 8,
+          "micro_accuracy": 0.6415094339622641,
+          "encoder_macro_accuracy": 0.640625,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5178571428571429,
+            0.703125
+          ],
+          "per_encoder_accuracy": {
+            "speech": 1.0,
+            "points": 0.25,
+            "vision": 1.0,
+            "mesh": 0.25,
+            "depth": 0.625,
+            "timeseries": 0.0,
+            "proprio": 1.0,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "speech": 8,
+            "points": 8,
+            "vision": 8,
+            "mesh": 8,
+            "depth": 8,
+            "timeseries": 4,
+            "proprio": 8,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.6415094339622641
+        },
+        "test_iid/full_matched/T4": {
+          "questions": 58,
+          "episodes": 9,
+          "micro_accuracy": 0.5517241379310345,
+          "encoder_macro_accuracy": 0.5079365079365079,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.46031746031746035,
+            0.5555555555555556
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.3333333333333333,
+            "vision": 1.0,
+            "points": 0.1111111111111111,
+            "timeseries": 0.0,
+            "depth": 0.4444444444444444,
+            "proprio": 0.6666666666666666,
+            "speech": 1.0
+          },
+          "per_encoder_count": {
+            "mesh": 9,
+            "vision": 9,
+            "points": 9,
+            "timeseries": 4,
+            "depth": 9,
+            "proprio": 9,
+            "speech": 9
+          },
+          "agrees_original_answer_fraction": 0.5517241379310345
+        },
+        "test_iid/full_matched/T5": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.7230769230769231,
+          "encoder_macro_accuracy": 0.7685185185185186,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6375,
+            0.8334126984126984
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "points": 0.2,
+            "force": 0.75,
+            "speech": 1.0,
+            "mesh": 0.4,
+            "proprio": 0.9,
+            "tactile": 0.6666666666666666,
+            "impact": 1.0,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "points": 10,
+            "force": 8,
+            "speech": 10,
+            "mesh": 10,
+            "proprio": 10,
+            "tactile": 3,
+            "impact": 3,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.7230769230769231
+        },
+        "test_iid/full_matched/T6": {
+          "questions": 80,
+          "episodes": 10,
+          "micro_accuracy": 0.7375,
+          "encoder_macro_accuracy": 0.7554673721340388,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6370282186948852,
+            0.8265895061728395
+          ],
+          "per_encoder_accuracy": {
+            "force": 0.7777777777777778,
+            "vision": 1.0,
+            "speech": 1.0,
+            "points": 0.1,
+            "flow": 1.0,
+            "mesh": 0.8,
+            "proprio": 0.8,
+            "tactile": 0.5714285714285714,
+            "impact": 0.75
+          },
+          "per_encoder_count": {
+            "force": 18,
+            "vision": 10,
+            "speech": 10,
+            "points": 10,
+            "flow": 1,
+            "mesh": 10,
+            "proprio": 10,
+            "tactile": 7,
+            "impact": 4
+          },
+          "agrees_original_answer_fraction": 0.7375
+        },
+        "test_iid/full_matched/T8": {
+          "questions": 49,
+          "episodes": 9,
+          "micro_accuracy": 0.6938775510204082,
+          "encoder_macro_accuracy": 0.6759259259259259,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5555555555555556,
+            0.7962962962962962
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.3333333333333333,
+            "vision": 1.0,
+            "timeseries": 0.5,
+            "proprio": 0.8888888888888888,
+            "points": 0.3333333333333333,
+            "speech": 1.0
+          },
+          "per_encoder_count": {
+            "mesh": 9,
+            "vision": 9,
+            "timeseries": 4,
+            "proprio": 9,
+            "points": 9,
+            "speech": 9
+          },
+          "agrees_original_answer_fraction": 0.6938775510204082
+        },
+        "test_visual_ood/full_matched/all": {
+          "questions": 425,
+          "episodes": 66,
+          "micro_accuracy": 0.3458823529411765,
+          "encoder_macro_accuracy": 0.493722978277576,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4209376171597358,
+            0.5450257815867198
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "speech": 0.0,
+            "points": 0.22727272727272727,
+            "timeseries": 0.2857142857142857,
+            "mesh": 0.4393939393939394,
+            "depth": 0.41379310344827586,
+            "proprio": 0.7575757575757576,
+            "force": 0.7037037037037037,
+            "tactile": 0.8888888888888888,
+            "flow": 0.8333333333333334,
+            "impact": 0.375,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 66,
+            "speech": 66,
+            "points": 66,
+            "timeseries": 14,
+            "mesh": 66,
+            "depth": 29,
+            "proprio": 66,
+            "force": 27,
+            "tactile": 9,
+            "flow": 6,
+            "impact": 8,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.3458823529411765
+        },
+        "test_visual_ood/full_matched/T1": {
+          "questions": 40,
+          "episodes": 8,
+          "micro_accuracy": 0.175,
+          "encoder_macro_accuracy": 0.175,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.075,
+            0.275
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "speech": 0.0,
+            "points": 0.0,
+            "mesh": 0.5,
+            "proprio": 0.375
+          },
+          "per_encoder_count": {
+            "vision": 8,
+            "speech": 8,
+            "points": 8,
+            "mesh": 8,
+            "proprio": 8
+          },
+          "agrees_original_answer_fraction": 0.175
+        },
+        "test_visual_ood/full_matched/T2": {
+          "questions": 80,
+          "episodes": 10,
+          "micro_accuracy": 0.35,
+          "encoder_macro_accuracy": 0.3773809523809524,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.27,
+            0.4711131444313263
+          ],
+          "per_encoder_accuracy": {
+            "speech": 0.0,
+            "timeseries": 0.0,
+            "mesh": 0.8,
+            "vision": 0.0,
+            "points": 0.4,
+            "proprio": 0.4,
+            "depth": 0.3,
+            "force": 0.42857142857142855,
+            "flow": 0.0,
+            "impact": 0.2,
+            "cross_modal": 1.0,
+            "tactile": 1.0
+          },
+          "per_encoder_count": {
+            "speech": 10,
+            "timeseries": 2,
+            "mesh": 10,
+            "vision": 10,
+            "points": 10,
+            "proprio": 10,
+            "depth": 10,
+            "force": 7,
+            "flow": 1,
+            "impact": 5,
+            "cross_modal": 2,
+            "tactile": 3
+          },
+          "agrees_original_answer_fraction": 0.35
+        },
+        "test_visual_ood/full_matched/T3": {
+          "questions": 61,
+          "episodes": 9,
+          "micro_accuracy": 0.3114754098360656,
+          "encoder_macro_accuracy": 0.3958333333333333,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.22222222222222224,
+            0.47916666666666663
+          ],
+          "per_encoder_accuracy": {
+            "depth": 0.4444444444444444,
+            "timeseries": 0.5,
+            "speech": 0.0,
+            "proprio": 0.8888888888888888,
+            "points": 0.2222222222222222,
+            "mesh": 0.1111111111111111,
+            "vision": 0.0,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "depth": 9,
+            "timeseries": 6,
+            "speech": 9,
+            "proprio": 9,
+            "points": 9,
+            "mesh": 9,
+            "vision": 9,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.3114754098360656
+        },
+        "test_visual_ood/full_matched/T4": {
+          "questions": 62,
+          "episodes": 10,
+          "micro_accuracy": 0.25806451612903225,
+          "encoder_macro_accuracy": 0.2285714285714286,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.17142857142857143,
+            0.32857142857142857
+          ],
+          "per_encoder_accuracy": {
+            "proprio": 0.8,
+            "speech": 0.0,
+            "points": 0.2,
+            "vision": 0.0,
+            "mesh": 0.1,
+            "depth": 0.5,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "proprio": 10,
+            "speech": 10,
+            "points": 10,
+            "vision": 10,
+            "mesh": 10,
+            "depth": 10,
+            "timeseries": 2
+          },
+          "agrees_original_answer_fraction": 0.25806451612903225
+        },
+        "test_visual_ood/full_matched/T5": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.46153846153846156,
+          "encoder_macro_accuracy": 0.5625,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4571428571428572,
+            0.6
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "mesh": 0.8,
+            "speech": 0.0,
+            "flow": 1.0,
+            "proprio": 0.8,
+            "points": 0.3,
+            "tactile": 1.0,
+            "force": 0.6
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "mesh": 10,
+            "speech": 10,
+            "flow": 4,
+            "proprio": 10,
+            "points": 10,
+            "tactile": 1,
+            "force": 10
+          },
+          "agrees_original_answer_fraction": 0.46153846153846156
+        },
+        "test_visual_ood/full_matched/T6": {
+          "questions": 68,
+          "episodes": 10,
+          "micro_accuracy": 0.4852941176470588,
+          "encoder_macro_accuracy": 0.5208333333333333,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4041294642857143,
+            0.625
+          ],
+          "per_encoder_accuracy": {
+            "points": 0.3,
+            "vision": 0.0,
+            "force": 1.0,
+            "tactile": 0.8,
+            "mesh": 0.4,
+            "speech": 0.0,
+            "proprio": 1.0,
+            "impact": 0.6666666666666666
+          },
+          "per_encoder_count": {
+            "points": 10,
+            "vision": 10,
+            "force": 10,
+            "tactile": 5,
+            "mesh": 10,
+            "speech": 10,
+            "proprio": 10,
+            "impact": 3
+          },
+          "agrees_original_answer_fraction": 0.4852941176470588
+        },
+        "test_visual_ood/full_matched/T8": {
+          "questions": 49,
+          "episodes": 9,
+          "micro_accuracy": 0.2857142857142857,
+          "encoder_macro_accuracy": 0.2824074074074074,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.20370370370370372,
+            0.37782407407407403
+          ],
+          "per_encoder_accuracy": {
+            "points": 0.1111111111111111,
+            "mesh": 0.3333333333333333,
+            "speech": 0.0,
+            "timeseries": 0.25,
+            "proprio": 1.0,
+            "vision": 0.0
+          },
+          "per_encoder_count": {
+            "points": 9,
+            "mesh": 9,
+            "speech": 9,
+            "timeseries": 4,
+            "proprio": 9,
+            "vision": 9
+          },
+          "agrees_original_answer_fraction": 0.2857142857142857
+        }
+      },
+      "qa_checkpoint_sha256": "b5030cb79a74d0c5aa1ef4bffc7475310aa8022c8acca8d6d8a0cc28ea7741e6"
+    },
+    {
+      "model": "Qwen3.5-4B",
+      "execution_track": "joint_action",
+      "execution_phase_step": 4500,
+      "execution_checkpoint_sha256": "9a7d6d66cfd0d2e81baf36ca304385d9f4643151ac86b8fc81f4c02a3e2371dc",
+      "execution": {
+        "all": {
+          "episodes": 209,
+          "successes": 132,
+          "success_rate": 0.631578947368421,
+          "episode_bootstrap_ci95": [
+            0.569377990430622,
+            0.69377990430622
+          ],
+          "geometry_flags_diagnostic_only": 8
+        },
+        "test_iid": {
+          "episodes": 69,
+          "successes": 67,
+          "success_rate": 0.9710144927536232,
+          "episode_bootstrap_ci95": [
+            0.927536231884058,
+            1.0
+          ],
+          "geometry_flags_diagnostic_only": 1
+        },
+        "T1": {
+          "episodes": 29,
+          "successes": 9,
+          "success_rate": 0.3103448275862069,
+          "episode_bootstrap_ci95": [
+            0.13793103448275862,
+            0.4827586206896552
+          ],
+          "geometry_flags_diagnostic_only": 2
+        },
+        "test_compositional": {
+          "episodes": 70,
+          "successes": 39,
+          "success_rate": 0.5571428571428572,
+          "episode_bootstrap_ci95": [
+            0.44285714285714284,
+            0.6714285714285714
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "test_visual_ood": {
+          "episodes": 70,
+          "successes": 26,
+          "success_rate": 0.37142857142857144,
+          "episode_bootstrap_ci95": [
+            0.2571428571428571,
+            0.4857142857142857
+          ],
+          "geometry_flags_diagnostic_only": 7
+        },
+        "T2": {
+          "episodes": 30,
+          "successes": 18,
+          "success_rate": 0.6,
+          "episode_bootstrap_ci95": [
+            0.43333333333333335,
+            0.7666666666666667
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T3": {
+          "episodes": 30,
+          "successes": 10,
+          "success_rate": 0.3333333333333333,
+          "episode_bootstrap_ci95": [
+            0.16666666666666666,
+            0.5
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T4": {
+          "episodes": 30,
+          "successes": 10,
+          "success_rate": 0.3333333333333333,
+          "episode_bootstrap_ci95": [
+            0.16666666666666666,
+            0.5
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T5": {
+          "episodes": 30,
+          "successes": 29,
+          "success_rate": 0.9666666666666667,
+          "episode_bootstrap_ci95": [
+            0.9,
+            1.0
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T6": {
+          "episodes": 30,
+          "successes": 30,
+          "success_rate": 1.0,
+          "episode_bootstrap_ci95": [
+            1.0,
+            1.0
+          ],
+          "geometry_flags_diagnostic_only": 0
+        },
+        "T8": {
+          "episodes": 30,
+          "successes": 26,
+          "success_rate": 0.8666666666666667,
+          "episode_bootstrap_ci95": [
+            0.7333333333333333,
+            0.9666666666666667
+          ],
+          "geometry_flags_diagnostic_only": 6
+        }
+      },
+      "ee": {
+        "all": {
+          "frames": 18430,
+          "episodes": 194,
+          "absolute_target_mae_cm": 0.10172016772913292,
+          "delta_mae_cm": 0.10172016772913292,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.08813208303197861,
+            0.11599528799058646
+          ],
+          "next_observed_mae_cm": 0.10167485546835228,
+          "gripper_accuracy": 0.9618556701030928,
+          "gripper_open_f1": 0.9726576173622185,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "test_compositional": {
+          "frames": 6365,
+          "episodes": 67,
+          "absolute_target_mae_cm": 0.14806024165436676,
+          "delta_mae_cm": 0.14806024165436676,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.11654715194969298,
+            0.183772649534227
+          ],
+          "next_observed_mae_cm": 0.1479882934902014,
+          "gripper_accuracy": 0.8958366064414768,
+          "gripper_open_f1": 0.9249065579340808,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T1": {
+          "frames": 2280,
+          "episodes": 24,
+          "absolute_target_mae_cm": 0.20361036882253788,
+          "delta_mae_cm": 0.20361036882253788,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.14865681896391353,
+            0.2557944332718545
+          ],
+          "next_observed_mae_cm": 0.20353906234499605,
+          "gripper_accuracy": 0.8864035087719299,
+          "gripper_open_f1": 0.8770764119601329,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T2": {
+          "frames": 2660,
+          "episodes": 28,
+          "absolute_target_mae_cm": 0.06227620495675846,
+          "delta_mae_cm": 0.06227620495675846,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.044562951555078216,
+            0.08069449669689369
+          ],
+          "next_observed_mae_cm": 0.062225211243131164,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T3": {
+          "frames": 2565,
+          "episodes": 27,
+          "absolute_target_mae_cm": 0.15107011159647754,
+          "delta_mae_cm": 0.15107011159647754,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.11353768654295641,
+            0.1868244794963611
+          ],
+          "next_observed_mae_cm": 0.15101626311850028,
+          "gripper_accuracy": 0.9306042884990253,
+          "gripper_open_f1": 0.9203222918531782,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T4": {
+          "frames": 2755,
+          "episodes": 29,
+          "absolute_target_mae_cm": 0.14442445503551168,
+          "delta_mae_cm": 0.14442445503551168,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.10653577408512475,
+            0.18173212289841661
+          ],
+          "next_observed_mae_cm": 0.14436424241955653,
+          "gripper_accuracy": 0.908529945553539,
+          "gripper_open_f1": 0.8983870967741936,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T5": {
+          "frames": 2850,
+          "episodes": 30,
+          "absolute_target_mae_cm": 0.054526804826393924,
+          "delta_mae_cm": 0.054526804826393924,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.038934606263527384,
+            0.07029300166316955
+          ],
+          "next_observed_mae_cm": 0.05449111017214722,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T6": {
+          "frames": 2850,
+          "episodes": 30,
+          "absolute_target_mae_cm": 0.05503215824535704,
+          "delta_mae_cm": 0.05503215824535704,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.038560895658421884,
+            0.07146268907912062
+          ],
+          "next_observed_mae_cm": 0.05498535062872657,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "T8": {
+          "frames": 2470,
+          "episodes": 26,
+          "absolute_target_mae_cm": 0.059590724909014486,
+          "delta_mae_cm": 0.059590724909014486,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.04106177457917939,
+            0.07998079037812478
+          ],
+          "next_observed_mae_cm": 0.05959163812999632,
+          "gripper_accuracy": 0.994331983805668,
+          "gripper_open_f1": 0.9935483870967742,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "test_iid": {
+          "frames": 5795,
+          "episodes": 61,
+          "absolute_target_mae_cm": 0.02419105606232758,
+          "delta_mae_cm": 0.02419105606232758,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.02331770393484259,
+            0.02519221239585656
+          ],
+          "next_observed_mae_cm": 0.0242088665337984,
+          "gripper_accuracy": 1.0,
+          "gripper_open_f1": 1.0,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        },
+        "test_visual_ood": {
+          "frames": 6270,
+          "episodes": 66,
+          "absolute_target_mae_cm": 0.12633366558798834,
+          "delta_mae_cm": 0.12633366558798834,
+          "delta_mae_episode_bootstrap_ci95_cm": [
+            0.1230705762410238,
+            0.1295722654895271
+          ],
+          "next_observed_mae_cm": 0.12625705209780527,
+          "gripper_accuracy": 0.9936204146730463,
+          "gripper_open_f1": 0.9953938277291571,
+          "gripper_positive_definition": "finger opening > 0.02 m (open)"
+        }
+      },
+      "qa_track": "qa",
+      "qa_phase_step": 800,
+      "qa": {
+        "test_compositional/full_matched/all": {
+          "questions": 420,
+          "episodes": 67,
+          "micro_accuracy": 0.638095238095238,
+          "encoder_macro_accuracy": 0.6141534275085553,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5320159656946313,
+            0.6607830450418521
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "speech": 1.0,
+            "points": 0.3582089552238806,
+            "proprio": 0.7014925373134329,
+            "tactile": 0.625,
+            "flow": 0.6,
+            "mesh": 0.5074626865671642,
+            "force": 0.5,
+            "impact": 0.8,
+            "depth": 0.1724137931034483,
+            "timeseries": 0.10526315789473684,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 67,
+            "speech": 67,
+            "points": 67,
+            "proprio": 67,
+            "tactile": 8,
+            "flow": 5,
+            "mesh": 67,
+            "force": 18,
+            "impact": 5,
+            "depth": 29,
+            "timeseries": 19,
+            "cross_modal": 1
+          },
+          "agrees_original_answer_fraction": 0.638095238095238
+        },
+        "test_compositional/full_matched/T1": {
+          "questions": 51,
+          "episodes": 10,
+          "micro_accuracy": 0.7058823529411765,
+          "encoder_macro_accuracy": 0.6,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5333333333333333,
+            0.8
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "speech": 1.0,
+            "points": 0.5,
+            "mesh": 0.3,
+            "proprio": 0.8,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "speech": 10,
+            "points": 10,
+            "mesh": 10,
+            "proprio": 10,
+            "timeseries": 1
+          },
+          "agrees_original_answer_fraction": 0.7058823529411765
+        },
+        "test_compositional/full_matched/T2": {
+          "questions": 75,
+          "episodes": 9,
+          "micro_accuracy": 0.5866666666666667,
+          "encoder_macro_accuracy": 0.6064814814814815,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4970701058201058,
+            0.6681314634439635
+          ],
+          "per_encoder_accuracy": {
+            "proprio": 0.7777777777777778,
+            "tactile": 0.6666666666666666,
+            "points": 0.3333333333333333,
+            "impact": 0.6666666666666666,
+            "vision": 1.0,
+            "mesh": 0.6666666666666666,
+            "force": 0.3333333333333333,
+            "depth": 0.0,
+            "speech": 1.0,
+            "flow": 0.5,
+            "cross_modal": 1.0,
+            "timeseries": 0.3333333333333333
+          },
+          "per_encoder_count": {
+            "proprio": 9,
+            "tactile": 3,
+            "points": 9,
+            "impact": 3,
+            "vision": 9,
+            "mesh": 9,
+            "force": 6,
+            "depth": 9,
+            "speech": 9,
+            "flow": 2,
+            "cross_modal": 1,
+            "timeseries": 6
+          },
+          "agrees_original_answer_fraction": 0.5866666666666667
+        },
+        "test_compositional/full_matched/T3": {
+          "questions": 67,
+          "episodes": 10,
+          "micro_accuracy": 0.6119402985074627,
+          "encoder_macro_accuracy": 0.5125,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.42500000000000004,
+            0.6714285714285715
+          ],
+          "per_encoder_accuracy": {
+            "flow": 0.0,
+            "points": 0.5,
+            "vision": 1.0,
+            "mesh": 0.5,
+            "proprio": 0.6,
+            "speech": 1.0,
+            "depth": 0.5,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "flow": 1,
+            "points": 10,
+            "vision": 10,
+            "mesh": 10,
+            "proprio": 10,
+            "speech": 10,
+            "depth": 10,
+            "timeseries": 6
+          },
+          "agrees_original_answer_fraction": 0.6119402985074627
+        },
+        "test_compositional/full_matched/T4": {
+          "questions": 63,
+          "episodes": 10,
+          "micro_accuracy": 0.5238095238095238,
+          "encoder_macro_accuracy": 0.4714285714285714,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.38571428571428573,
+            0.5666666666666667
+          ],
+          "per_encoder_accuracy": {
+            "speech": 1.0,
+            "proprio": 0.4,
+            "vision": 1.0,
+            "points": 0.6,
+            "depth": 0.0,
+            "mesh": 0.3,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "speech": 10,
+            "proprio": 10,
+            "vision": 10,
+            "points": 10,
+            "depth": 10,
+            "mesh": 10,
+            "timeseries": 3
+          },
+          "agrees_original_answer_fraction": 0.5238095238095238
+        },
+        "test_compositional/full_matched/T5": {
+          "questions": 56,
+          "episodes": 10,
+          "micro_accuracy": 0.8214285714285714,
+          "encoder_macro_accuracy": 0.85625,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.7857142857142858,
+            0.9
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "force": 0.75,
+            "proprio": 0.9,
+            "tactile": 1.0,
+            "speech": 1.0,
+            "mesh": 0.8,
+            "flow": 1.0,
+            "points": 0.4
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "force": 4,
+            "proprio": 10,
+            "tactile": 1,
+            "speech": 10,
+            "mesh": 10,
+            "flow": 1,
+            "points": 10
+          },
+          "agrees_original_answer_fraction": 0.8214285714285714
+        },
+        "test_compositional/full_matched/T6": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.7384615384615385,
+          "encoder_macro_accuracy": 0.7666666666666667,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6874553571428571,
+            0.8407407407407407
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.9,
+            "speech": 1.0,
+            "points": 0.0,
+            "tactile": 0.5,
+            "proprio": 1.0,
+            "impact": 1.0,
+            "vision": 1.0,
+            "force": 0.5,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "mesh": 10,
+            "speech": 10,
+            "points": 10,
+            "tactile": 4,
+            "proprio": 10,
+            "impact": 2,
+            "vision": 10,
+            "force": 8,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.7384615384615385
+        },
+        "test_compositional/full_matched/T8": {
+          "questions": 43,
+          "episodes": 8,
+          "micro_accuracy": 0.46511627906976744,
+          "encoder_macro_accuracy": 0.4166666666666667,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.3541666666666667,
+            0.4791666666666667
+          ],
+          "per_encoder_accuracy": {
+            "speech": 1.0,
+            "points": 0.125,
+            "mesh": 0.0,
+            "vision": 1.0,
+            "timeseries": 0.0,
+            "proprio": 0.375
+          },
+          "per_encoder_count": {
+            "speech": 8,
+            "points": 8,
+            "mesh": 8,
+            "vision": 8,
+            "timeseries": 3,
+            "proprio": 8
+          },
+          "agrees_original_answer_fraction": 0.46511627906976744
+        },
+        "test_iid/full_matched/all": {
+          "questions": 418,
+          "episodes": 61,
+          "micro_accuracy": 0.6363636363636364,
+          "encoder_macro_accuracy": 0.665887538811237,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6088516638894992,
+            0.710607175944322
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "speech": 1.0,
+            "points": 0.22950819672131148,
+            "proprio": 0.7377049180327869,
+            "force": 0.6285714285714286,
+            "mesh": 0.3770491803278688,
+            "impact": 0.7692307692307693,
+            "depth": 0.38461538461538464,
+            "timeseries": 0.17647058823529413,
+            "flow": 1.0,
+            "tactile": 0.6875,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 61,
+            "speech": 61,
+            "points": 61,
+            "proprio": 61,
+            "force": 35,
+            "mesh": 61,
+            "impact": 13,
+            "depth": 26,
+            "timeseries": 17,
+            "flow": 4,
+            "tactile": 16,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.6363636363636364
+        },
+        "test_iid/full_matched/T1": {
+          "questions": 30,
+          "episodes": 6,
+          "micro_accuracy": 0.6333333333333333,
+          "encoder_macro_accuracy": 0.6333333333333333,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5,
+            0.7666666666666667
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "speech": 1.0,
+            "points": 0.3333333333333333,
+            "mesh": 0.16666666666666666,
+            "proprio": 0.6666666666666666
+          },
+          "per_encoder_count": {
+            "vision": 6,
+            "speech": 6,
+            "points": 6,
+            "mesh": 6,
+            "proprio": 6
+          },
+          "agrees_original_answer_fraction": 0.6333333333333333
+        },
+        "test_iid/full_matched/T2": {
+          "questions": 83,
+          "episodes": 9,
+          "micro_accuracy": 0.4939759036144578,
+          "encoder_macro_accuracy": 0.5675925925925925,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4367918771043771,
+            0.6475792147667147
+          ],
+          "per_encoder_accuracy": {
+            "speech": 1.0,
+            "points": 0.3333333333333333,
+            "proprio": 0.2222222222222222,
+            "force": 0.2222222222222222,
+            "mesh": 0.2222222222222222,
+            "impact": 0.6666666666666666,
+            "vision": 1.0,
+            "depth": 0.1111111111111111,
+            "tactile": 0.8333333333333334,
+            "flow": 1.0,
+            "timeseries": 0.2,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "speech": 9,
+            "points": 9,
+            "proprio": 9,
+            "force": 9,
+            "mesh": 9,
+            "impact": 6,
+            "vision": 9,
+            "depth": 9,
+            "tactile": 6,
+            "flow": 1,
+            "timeseries": 5,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.4939759036144578
+        },
+        "test_iid/full_matched/T3": {
+          "questions": 53,
+          "episodes": 8,
+          "micro_accuracy": 0.6415094339622641,
+          "encoder_macro_accuracy": 0.640625,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5178571428571429,
+            0.703125
+          ],
+          "per_encoder_accuracy": {
+            "speech": 1.0,
+            "points": 0.25,
+            "vision": 1.0,
+            "mesh": 0.25,
+            "depth": 0.625,
+            "timeseries": 0.0,
+            "proprio": 1.0,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "speech": 8,
+            "points": 8,
+            "vision": 8,
+            "mesh": 8,
+            "depth": 8,
+            "timeseries": 4,
+            "proprio": 8,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.6415094339622641
+        },
+        "test_iid/full_matched/T4": {
+          "questions": 58,
+          "episodes": 9,
+          "micro_accuracy": 0.5517241379310345,
+          "encoder_macro_accuracy": 0.5079365079365079,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.46031746031746035,
+            0.5555555555555556
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.3333333333333333,
+            "vision": 1.0,
+            "points": 0.1111111111111111,
+            "timeseries": 0.0,
+            "depth": 0.4444444444444444,
+            "proprio": 0.6666666666666666,
+            "speech": 1.0
+          },
+          "per_encoder_count": {
+            "mesh": 9,
+            "vision": 9,
+            "points": 9,
+            "timeseries": 4,
+            "depth": 9,
+            "proprio": 9,
+            "speech": 9
+          },
+          "agrees_original_answer_fraction": 0.5517241379310345
+        },
+        "test_iid/full_matched/T5": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.7230769230769231,
+          "encoder_macro_accuracy": 0.7685185185185186,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6375,
+            0.8334126984126984
+          ],
+          "per_encoder_accuracy": {
+            "vision": 1.0,
+            "points": 0.2,
+            "force": 0.75,
+            "speech": 1.0,
+            "mesh": 0.4,
+            "proprio": 0.9,
+            "tactile": 0.6666666666666666,
+            "impact": 1.0,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "points": 10,
+            "force": 8,
+            "speech": 10,
+            "mesh": 10,
+            "proprio": 10,
+            "tactile": 3,
+            "impact": 3,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.7230769230769231
+        },
+        "test_iid/full_matched/T6": {
+          "questions": 80,
+          "episodes": 10,
+          "micro_accuracy": 0.7375,
+          "encoder_macro_accuracy": 0.7554673721340388,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.6370282186948852,
+            0.8265895061728395
+          ],
+          "per_encoder_accuracy": {
+            "force": 0.7777777777777778,
+            "vision": 1.0,
+            "speech": 1.0,
+            "points": 0.1,
+            "flow": 1.0,
+            "mesh": 0.8,
+            "proprio": 0.8,
+            "tactile": 0.5714285714285714,
+            "impact": 0.75
+          },
+          "per_encoder_count": {
+            "force": 18,
+            "vision": 10,
+            "speech": 10,
+            "points": 10,
+            "flow": 1,
+            "mesh": 10,
+            "proprio": 10,
+            "tactile": 7,
+            "impact": 4
+          },
+          "agrees_original_answer_fraction": 0.7375
+        },
+        "test_iid/full_matched/T8": {
+          "questions": 49,
+          "episodes": 9,
+          "micro_accuracy": 0.6938775510204082,
+          "encoder_macro_accuracy": 0.6759259259259259,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5555555555555556,
+            0.7962962962962962
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.3333333333333333,
+            "vision": 1.0,
+            "timeseries": 0.5,
+            "proprio": 0.8888888888888888,
+            "points": 0.3333333333333333,
+            "speech": 1.0
+          },
+          "per_encoder_count": {
+            "mesh": 9,
+            "vision": 9,
+            "timeseries": 4,
+            "proprio": 9,
+            "points": 9,
+            "speech": 9
+          },
+          "agrees_original_answer_fraction": 0.6938775510204082
+        },
+        "test_visual_ood/full_matched/all": {
+          "questions": 425,
+          "episodes": 66,
+          "micro_accuracy": 0.3458823529411765,
+          "encoder_macro_accuracy": 0.493722978277576,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4209376171597358,
+            0.5450257815867198
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "speech": 0.0,
+            "points": 0.22727272727272727,
+            "timeseries": 0.2857142857142857,
+            "mesh": 0.4393939393939394,
+            "depth": 0.41379310344827586,
+            "proprio": 0.7575757575757576,
+            "force": 0.7037037037037037,
+            "tactile": 0.8888888888888888,
+            "flow": 0.8333333333333334,
+            "impact": 0.375,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 66,
+            "speech": 66,
+            "points": 66,
+            "timeseries": 14,
+            "mesh": 66,
+            "depth": 29,
+            "proprio": 66,
+            "force": 27,
+            "tactile": 9,
+            "flow": 6,
+            "impact": 8,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.3458823529411765
+        },
+        "test_visual_ood/full_matched/T1": {
+          "questions": 40,
+          "episodes": 8,
+          "micro_accuracy": 0.175,
+          "encoder_macro_accuracy": 0.175,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.075,
+            0.275
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "speech": 0.0,
+            "points": 0.0,
+            "mesh": 0.5,
+            "proprio": 0.375
+          },
+          "per_encoder_count": {
+            "vision": 8,
+            "speech": 8,
+            "points": 8,
+            "mesh": 8,
+            "proprio": 8
+          },
+          "agrees_original_answer_fraction": 0.175
+        },
+        "test_visual_ood/full_matched/T2": {
+          "questions": 80,
+          "episodes": 10,
+          "micro_accuracy": 0.35,
+          "encoder_macro_accuracy": 0.3773809523809524,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.27,
+            0.4711131444313263
+          ],
+          "per_encoder_accuracy": {
+            "speech": 0.0,
+            "timeseries": 0.0,
+            "mesh": 0.8,
+            "vision": 0.0,
+            "points": 0.4,
+            "proprio": 0.4,
+            "depth": 0.3,
+            "force": 0.42857142857142855,
+            "flow": 0.0,
+            "impact": 0.2,
+            "cross_modal": 1.0,
+            "tactile": 1.0
+          },
+          "per_encoder_count": {
+            "speech": 10,
+            "timeseries": 2,
+            "mesh": 10,
+            "vision": 10,
+            "points": 10,
+            "proprio": 10,
+            "depth": 10,
+            "force": 7,
+            "flow": 1,
+            "impact": 5,
+            "cross_modal": 2,
+            "tactile": 3
+          },
+          "agrees_original_answer_fraction": 0.35
+        },
+        "test_visual_ood/full_matched/T3": {
+          "questions": 61,
+          "episodes": 9,
+          "micro_accuracy": 0.3114754098360656,
+          "encoder_macro_accuracy": 0.3958333333333333,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.22222222222222224,
+            0.47916666666666663
+          ],
+          "per_encoder_accuracy": {
+            "depth": 0.4444444444444444,
+            "timeseries": 0.5,
+            "speech": 0.0,
+            "proprio": 0.8888888888888888,
+            "points": 0.2222222222222222,
+            "mesh": 0.1111111111111111,
+            "vision": 0.0,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "depth": 9,
+            "timeseries": 6,
+            "speech": 9,
+            "proprio": 9,
+            "points": 9,
+            "mesh": 9,
+            "vision": 9,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.3114754098360656
+        },
+        "test_visual_ood/full_matched/T4": {
+          "questions": 62,
+          "episodes": 10,
+          "micro_accuracy": 0.25806451612903225,
+          "encoder_macro_accuracy": 0.2285714285714286,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.17142857142857143,
+            0.32857142857142857
+          ],
+          "per_encoder_accuracy": {
+            "proprio": 0.8,
+            "speech": 0.0,
+            "points": 0.2,
+            "vision": 0.0,
+            "mesh": 0.1,
+            "depth": 0.5,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "proprio": 10,
+            "speech": 10,
+            "points": 10,
+            "vision": 10,
+            "mesh": 10,
+            "depth": 10,
+            "timeseries": 2
+          },
+          "agrees_original_answer_fraction": 0.25806451612903225
+        },
+        "test_visual_ood/full_matched/T5": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.46153846153846156,
+          "encoder_macro_accuracy": 0.5625,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4571428571428572,
+            0.6
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "mesh": 0.8,
+            "speech": 0.0,
+            "flow": 1.0,
+            "proprio": 0.8,
+            "points": 0.3,
+            "tactile": 1.0,
+            "force": 0.6
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "mesh": 10,
+            "speech": 10,
+            "flow": 4,
+            "proprio": 10,
+            "points": 10,
+            "tactile": 1,
+            "force": 10
+          },
+          "agrees_original_answer_fraction": 0.46153846153846156
+        },
+        "test_visual_ood/full_matched/T6": {
+          "questions": 68,
+          "episodes": 10,
+          "micro_accuracy": 0.4852941176470588,
+          "encoder_macro_accuracy": 0.5208333333333333,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.4041294642857143,
+            0.625
+          ],
+          "per_encoder_accuracy": {
+            "points": 0.3,
+            "vision": 0.0,
+            "force": 1.0,
+            "tactile": 0.8,
+            "mesh": 0.4,
+            "speech": 0.0,
+            "proprio": 1.0,
+            "impact": 0.6666666666666666
+          },
+          "per_encoder_count": {
+            "points": 10,
+            "vision": 10,
+            "force": 10,
+            "tactile": 5,
+            "mesh": 10,
+            "speech": 10,
+            "proprio": 10,
+            "impact": 3
+          },
+          "agrees_original_answer_fraction": 0.4852941176470588
+        },
+        "test_visual_ood/full_matched/T8": {
+          "questions": 49,
+          "episodes": 9,
+          "micro_accuracy": 0.2857142857142857,
+          "encoder_macro_accuracy": 0.2824074074074074,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.20370370370370372,
+            0.37782407407407403
+          ],
+          "per_encoder_accuracy": {
+            "points": 0.1111111111111111,
+            "mesh": 0.3333333333333333,
+            "speech": 0.0,
+            "timeseries": 0.25,
+            "proprio": 1.0,
+            "vision": 0.0
+          },
+          "per_encoder_count": {
+            "points": 9,
+            "mesh": 9,
+            "speech": 9,
+            "timeseries": 4,
+            "proprio": 9,
+            "vision": 9
+          },
+          "agrees_original_answer_fraction": 0.2857142857142857
+        }
+      },
+      "qa_checkpoint_sha256": "b5030cb79a74d0c5aa1ef4bffc7475310aa8022c8acca8d6d8a0cc28ea7741e6",
+      "qa_retention_same_execution_checkpoint": {
+        "test_compositional/full_matched/all": {
+          "questions": 420,
+          "episodes": 67,
+          "micro_accuracy": 0.36904761904761907,
+          "encoder_macro_accuracy": 0.4372485287316192,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.32496015893919755,
+            0.49578117627133916
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.373134328358209,
+            "speech": 0.417910447761194,
+            "points": 0.23880597014925373,
+            "proprio": 0.47761194029850745,
+            "tactile": 0.625,
+            "flow": 0.6,
+            "mesh": 0.40298507462686567,
+            "force": 0.2777777777777778,
+            "impact": 0.4,
+            "depth": 0.27586206896551724,
+            "timeseries": 0.15789473684210525,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 67,
+            "speech": 67,
+            "points": 67,
+            "proprio": 67,
+            "tactile": 8,
+            "flow": 5,
+            "mesh": 67,
+            "force": 18,
+            "impact": 5,
+            "depth": 29,
+            "timeseries": 19,
+            "cross_modal": 1
+          },
+          "agrees_original_answer_fraction": 0.36904761904761907
+        },
+        "test_compositional/full_matched/T1": {
+          "questions": 51,
+          "episodes": 10,
+          "micro_accuracy": 0.29411764705882354,
+          "encoder_macro_accuracy": 0.25,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.16666666666666666,
+            0.38
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.2,
+            "speech": 0.2,
+            "points": 0.2,
+            "mesh": 0.3,
+            "proprio": 0.6,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "speech": 10,
+            "points": 10,
+            "mesh": 10,
+            "proprio": 10,
+            "timeseries": 1
+          },
+          "agrees_original_answer_fraction": 0.29411764705882354
+        },
+        "test_compositional/full_matched/T2": {
+          "questions": 75,
+          "episodes": 9,
+          "micro_accuracy": 0.3333333333333333,
+          "encoder_macro_accuracy": 0.38888888888888884,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.26515151515151514,
+            0.4467675264550265
+          ],
+          "per_encoder_accuracy": {
+            "proprio": 0.0,
+            "tactile": 0.6666666666666666,
+            "points": 0.1111111111111111,
+            "impact": 0.0,
+            "vision": 0.3333333333333333,
+            "mesh": 0.7777777777777778,
+            "force": 0.16666666666666666,
+            "depth": 0.3333333333333333,
+            "speech": 0.4444444444444444,
+            "flow": 0.5,
+            "cross_modal": 1.0,
+            "timeseries": 0.3333333333333333
+          },
+          "per_encoder_count": {
+            "proprio": 9,
+            "tactile": 3,
+            "points": 9,
+            "impact": 3,
+            "vision": 9,
+            "mesh": 9,
+            "force": 6,
+            "depth": 9,
+            "speech": 9,
+            "flow": 2,
+            "cross_modal": 1,
+            "timeseries": 6
+          },
+          "agrees_original_answer_fraction": 0.3333333333333333
+        },
+        "test_compositional/full_matched/T3": {
+          "questions": 67,
+          "episodes": 10,
+          "micro_accuracy": 0.3582089552238806,
+          "encoder_macro_accuracy": 0.30000000000000004,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.2125,
+            0.45714285714285713
+          ],
+          "per_encoder_accuracy": {
+            "flow": 0.0,
+            "points": 0.3,
+            "vision": 0.4,
+            "mesh": 0.4,
+            "proprio": 0.5,
+            "speech": 0.4,
+            "depth": 0.4,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "flow": 1,
+            "points": 10,
+            "vision": 10,
+            "mesh": 10,
+            "proprio": 10,
+            "speech": 10,
+            "depth": 10,
+            "timeseries": 6
+          },
+          "agrees_original_answer_fraction": 0.3582089552238806
+        },
+        "test_compositional/full_matched/T4": {
+          "questions": 63,
+          "episodes": 10,
+          "micro_accuracy": 0.30158730158730157,
+          "encoder_macro_accuracy": 0.27142857142857146,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.21428571428571427,
+            0.34285714285714286
+          ],
+          "per_encoder_accuracy": {
+            "speech": 0.3,
+            "proprio": 0.5,
+            "vision": 0.3,
+            "points": 0.4,
+            "depth": 0.1,
+            "mesh": 0.3,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "speech": 10,
+            "proprio": 10,
+            "vision": 10,
+            "points": 10,
+            "depth": 10,
+            "mesh": 10,
+            "timeseries": 3
+          },
+          "agrees_original_answer_fraction": 0.30158730158730157
+        },
+        "test_compositional/full_matched/T5": {
+          "questions": 56,
+          "episodes": 10,
+          "micro_accuracy": 0.5178571428571429,
+          "encoder_macro_accuracy": 0.60625,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.3567857142857143,
+            0.7166666666666667
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.7,
+            "force": 0.25,
+            "proprio": 0.6,
+            "tactile": 1.0,
+            "speech": 0.6,
+            "mesh": 0.4,
+            "flow": 1.0,
+            "points": 0.3
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "force": 4,
+            "proprio": 10,
+            "tactile": 1,
+            "speech": 10,
+            "mesh": 10,
+            "flow": 1,
+            "points": 10
+          },
+          "agrees_original_answer_fraction": 0.5178571428571429
+        },
+        "test_compositional/full_matched/T6": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.4307692307692308,
+          "encoder_macro_accuracy": 0.5416666666666666,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.3714285714285714,
+            0.6222222222222222
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.4,
+            "speech": 0.6,
+            "points": 0.1,
+            "tactile": 0.5,
+            "proprio": 0.6,
+            "impact": 1.0,
+            "vision": 0.3,
+            "force": 0.375,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "mesh": 10,
+            "speech": 10,
+            "points": 10,
+            "tactile": 4,
+            "proprio": 10,
+            "impact": 2,
+            "vision": 10,
+            "force": 8,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.4307692307692308
+        },
+        "test_compositional/full_matched/T8": {
+          "questions": 43,
+          "episodes": 8,
+          "micro_accuracy": 0.3488372093023256,
+          "encoder_macro_accuracy": 0.34722222222222215,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.125,
+            0.5625
+          ],
+          "per_encoder_accuracy": {
+            "speech": 0.375,
+            "points": 0.25,
+            "mesh": 0.25,
+            "vision": 0.375,
+            "timeseries": 0.3333333333333333,
+            "proprio": 0.5
+          },
+          "per_encoder_count": {
+            "speech": 8,
+            "points": 8,
+            "mesh": 8,
+            "vision": 8,
+            "timeseries": 3,
+            "proprio": 8
+          },
+          "agrees_original_answer_fraction": 0.3488372093023256
+        },
+        "test_iid/full_matched/all": {
+          "questions": 418,
+          "episodes": 61,
+          "micro_accuracy": 0.423444976076555,
+          "encoder_macro_accuracy": 0.5006629259522221,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.430552089003343,
+            0.5480912688701081
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.3770491803278688,
+            "speech": 0.4918032786885246,
+            "points": 0.36065573770491804,
+            "proprio": 0.5081967213114754,
+            "force": 0.45714285714285713,
+            "mesh": 0.4262295081967213,
+            "impact": 0.5384615384615384,
+            "depth": 0.23076923076923078,
+            "timeseries": 0.11764705882352941,
+            "flow": 1.0,
+            "tactile": 0.5,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 61,
+            "speech": 61,
+            "points": 61,
+            "proprio": 61,
+            "force": 35,
+            "mesh": 61,
+            "impact": 13,
+            "depth": 26,
+            "timeseries": 17,
+            "flow": 4,
+            "tactile": 16,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.423444976076555
+        },
+        "test_iid/full_matched/T1": {
+          "questions": 30,
+          "episodes": 6,
+          "micro_accuracy": 0.4666666666666667,
+          "encoder_macro_accuracy": 0.4666666666666666,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.3333333333333333,
+            0.5666666666666667
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.5,
+            "speech": 0.5,
+            "points": 0.5,
+            "mesh": 0.3333333333333333,
+            "proprio": 0.5
+          },
+          "per_encoder_count": {
+            "vision": 6,
+            "speech": 6,
+            "points": 6,
+            "mesh": 6,
+            "proprio": 6
+          },
+          "agrees_original_answer_fraction": 0.4666666666666667
+        },
+        "test_iid/full_matched/T2": {
+          "questions": 83,
+          "episodes": 9,
+          "micro_accuracy": 0.3253012048192771,
+          "encoder_macro_accuracy": 0.41759259259259257,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.20922664141414143,
+            0.49798941798941804
+          ],
+          "per_encoder_accuracy": {
+            "speech": 0.5555555555555556,
+            "points": 0.1111111111111111,
+            "proprio": 0.1111111111111111,
+            "force": 0.4444444444444444,
+            "mesh": 0.5555555555555556,
+            "impact": 0.16666666666666666,
+            "vision": 0.2222222222222222,
+            "depth": 0.1111111111111111,
+            "tactile": 0.3333333333333333,
+            "flow": 1.0,
+            "timeseries": 0.4,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "speech": 9,
+            "points": 9,
+            "proprio": 9,
+            "force": 9,
+            "mesh": 9,
+            "impact": 6,
+            "vision": 9,
+            "depth": 9,
+            "tactile": 6,
+            "flow": 1,
+            "timeseries": 5,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.3253012048192771
+        },
+        "test_iid/full_matched/T3": {
+          "questions": 53,
+          "episodes": 8,
+          "micro_accuracy": 0.3018867924528302,
+          "encoder_macro_accuracy": 0.359375,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.19642857142857142,
+            0.421875
+          ],
+          "per_encoder_accuracy": {
+            "speech": 0.125,
+            "points": 0.625,
+            "vision": 0.125,
+            "mesh": 0.375,
+            "depth": 0.25,
+            "timeseries": 0.0,
+            "proprio": 0.375,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "speech": 8,
+            "points": 8,
+            "vision": 8,
+            "mesh": 8,
+            "depth": 8,
+            "timeseries": 4,
+            "proprio": 8,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.3018867924528302
+        },
+        "test_iid/full_matched/T4": {
+          "questions": 58,
+          "episodes": 9,
+          "micro_accuracy": 0.39655172413793105,
+          "encoder_macro_accuracy": 0.36507936507936506,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.23809523809523808,
+            0.5396825396825397
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.4444444444444444,
+            "vision": 0.4444444444444444,
+            "points": 0.2222222222222222,
+            "timeseries": 0.0,
+            "depth": 0.3333333333333333,
+            "proprio": 0.6666666666666666,
+            "speech": 0.4444444444444444
+          },
+          "per_encoder_count": {
+            "mesh": 9,
+            "vision": 9,
+            "points": 9,
+            "timeseries": 4,
+            "depth": 9,
+            "proprio": 9,
+            "speech": 9
+          },
+          "agrees_original_answer_fraction": 0.39655172413793105
+        },
+        "test_iid/full_matched/T5": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.6461538461538462,
+          "encoder_macro_accuracy": 0.7074074074074075,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.5625,
+            0.8111111111111112
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.6,
+            "points": 0.5,
+            "force": 0.5,
+            "speech": 0.8,
+            "mesh": 0.6,
+            "proprio": 0.7,
+            "tactile": 0.6666666666666666,
+            "impact": 1.0,
+            "flow": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "points": 10,
+            "force": 8,
+            "speech": 10,
+            "mesh": 10,
+            "proprio": 10,
+            "tactile": 3,
+            "impact": 3,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.6461538461538462
+        },
+        "test_iid/full_matched/T6": {
+          "questions": 80,
+          "episodes": 10,
+          "micro_accuracy": 0.5625,
+          "encoder_macro_accuracy": 0.6295414462081129,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.49681423611111114,
+            0.6969560185185184
+          ],
+          "per_encoder_accuracy": {
+            "force": 0.4444444444444444,
+            "vision": 0.5,
+            "speech": 0.7,
+            "points": 0.6,
+            "flow": 1.0,
+            "mesh": 0.5,
+            "proprio": 0.6,
+            "tactile": 0.5714285714285714,
+            "impact": 0.75
+          },
+          "per_encoder_count": {
+            "force": 18,
+            "vision": 10,
+            "speech": 10,
+            "points": 10,
+            "flow": 1,
+            "mesh": 10,
+            "proprio": 10,
+            "tactile": 7,
+            "impact": 4
+          },
+          "agrees_original_answer_fraction": 0.5625
+        },
+        "test_iid/full_matched/T8": {
+          "questions": 49,
+          "episodes": 9,
+          "micro_accuracy": 0.20408163265306123,
+          "encoder_macro_accuracy": 0.1851851851851852,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.0925925925925926,
+            0.2962962962962963
+          ],
+          "per_encoder_accuracy": {
+            "mesh": 0.1111111111111111,
+            "vision": 0.2222222222222222,
+            "timeseries": 0.0,
+            "proprio": 0.5555555555555556,
+            "points": 0.0,
+            "speech": 0.2222222222222222
+          },
+          "per_encoder_count": {
+            "mesh": 9,
+            "vision": 9,
+            "timeseries": 4,
+            "proprio": 9,
+            "points": 9,
+            "speech": 9
+          },
+          "agrees_original_answer_fraction": 0.20408163265306123
+        },
+        "test_visual_ood/full_matched/all": {
+          "questions": 425,
+          "episodes": 66,
+          "micro_accuracy": 0.2611764705882353,
+          "encoder_macro_accuracy": 0.39221891879937854,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.3000476674314956,
+            0.4572908084109064
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "speech": 0.0,
+            "points": 0.2878787878787879,
+            "timeseries": 0.14285714285714285,
+            "mesh": 0.3333333333333333,
+            "depth": 0.2413793103448276,
+            "proprio": 0.4696969696969697,
+            "force": 0.5925925925925926,
+            "tactile": 0.5555555555555556,
+            "flow": 0.8333333333333334,
+            "impact": 0.25,
+            "cross_modal": 1.0
+          },
+          "per_encoder_count": {
+            "vision": 66,
+            "speech": 66,
+            "points": 66,
+            "timeseries": 14,
+            "mesh": 66,
+            "depth": 29,
+            "proprio": 66,
+            "force": 27,
+            "tactile": 9,
+            "flow": 6,
+            "impact": 8,
+            "cross_modal": 2
+          },
+          "agrees_original_answer_fraction": 0.2611764705882353
+        },
+        "test_visual_ood/full_matched/T1": {
+          "questions": 40,
+          "episodes": 8,
+          "micro_accuracy": 0.2,
+          "encoder_macro_accuracy": 0.2,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.125,
+            0.275
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "speech": 0.0,
+            "points": 0.25,
+            "mesh": 0.25,
+            "proprio": 0.5
+          },
+          "per_encoder_count": {
+            "vision": 8,
+            "speech": 8,
+            "points": 8,
+            "mesh": 8,
+            "proprio": 8
+          },
+          "agrees_original_answer_fraction": 0.2
+        },
+        "test_visual_ood/full_matched/T2": {
+          "questions": 80,
+          "episodes": 10,
+          "micro_accuracy": 0.2125,
+          "encoder_macro_accuracy": 0.2904761904761905,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.15453896103896103,
+            0.31666666666666665
+          ],
+          "per_encoder_accuracy": {
+            "speech": 0.0,
+            "timeseries": 0.0,
+            "mesh": 0.6,
+            "vision": 0.0,
+            "points": 0.6,
+            "proprio": 0.0,
+            "depth": 0.0,
+            "force": 0.2857142857142857,
+            "flow": 1.0,
+            "impact": 0.0,
+            "cross_modal": 1.0,
+            "tactile": 0.0
+          },
+          "per_encoder_count": {
+            "speech": 10,
+            "timeseries": 2,
+            "mesh": 10,
+            "vision": 10,
+            "points": 10,
+            "proprio": 10,
+            "depth": 10,
+            "force": 7,
+            "flow": 1,
+            "impact": 5,
+            "cross_modal": 2,
+            "tactile": 3
+          },
+          "agrees_original_answer_fraction": 0.2125
+        },
+        "test_visual_ood/full_matched/T3": {
+          "questions": 61,
+          "episodes": 9,
+          "micro_accuracy": 0.26229508196721313,
+          "encoder_macro_accuracy": 0.2361111111111111,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.15674603174603174,
+            0.37513888888888874
+          ],
+          "per_encoder_accuracy": {
+            "depth": 0.3333333333333333,
+            "timeseries": 0.3333333333333333,
+            "speech": 0.0,
+            "proprio": 0.4444444444444444,
+            "points": 0.4444444444444444,
+            "mesh": 0.3333333333333333,
+            "vision": 0.0,
+            "flow": 0.0
+          },
+          "per_encoder_count": {
+            "depth": 9,
+            "timeseries": 6,
+            "speech": 9,
+            "proprio": 9,
+            "points": 9,
+            "mesh": 9,
+            "vision": 9,
+            "flow": 1
+          },
+          "agrees_original_answer_fraction": 0.26229508196721313
+        },
+        "test_visual_ood/full_matched/T4": {
+          "questions": 62,
+          "episodes": 10,
+          "micro_accuracy": 0.1774193548387097,
+          "encoder_macro_accuracy": 0.15714285714285717,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.09999999999999999,
+            0.2285714285714286
+          ],
+          "per_encoder_accuracy": {
+            "proprio": 0.5,
+            "speech": 0.0,
+            "points": 0.1,
+            "vision": 0.0,
+            "mesh": 0.1,
+            "depth": 0.4,
+            "timeseries": 0.0
+          },
+          "per_encoder_count": {
+            "proprio": 10,
+            "speech": 10,
+            "points": 10,
+            "vision": 10,
+            "mesh": 10,
+            "depth": 10,
+            "timeseries": 2
+          },
+          "agrees_original_answer_fraction": 0.1774193548387097
+        },
+        "test_visual_ood/full_matched/T5": {
+          "questions": 65,
+          "episodes": 10,
+          "micro_accuracy": 0.36923076923076925,
+          "encoder_macro_accuracy": 0.4875,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.3499404761904762,
+            0.5472470238095238
+          ],
+          "per_encoder_accuracy": {
+            "vision": 0.0,
+            "mesh": 0.5,
+            "speech": 0.0,
+            "flow": 1.0,
+            "proprio": 0.5,
+            "points": 0.2,
+            "tactile": 1.0,
+            "force": 0.7
+          },
+          "per_encoder_count": {
+            "vision": 10,
+            "mesh": 10,
+            "speech": 10,
+            "flow": 4,
+            "proprio": 10,
+            "points": 10,
+            "tactile": 1,
+            "force": 10
+          },
+          "agrees_original_answer_fraction": 0.36923076923076925
+        },
+        "test_visual_ood/full_matched/T6": {
+          "questions": 68,
+          "episodes": 10,
+          "micro_accuracy": 0.3382352941176471,
+          "encoder_macro_accuracy": 0.3958333333333333,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.25625000000000003,
+            0.5125
+          ],
+          "per_encoder_accuracy": {
+            "points": 0.3,
+            "vision": 0.0,
+            "force": 0.7,
+            "tactile": 0.8,
+            "mesh": 0.2,
+            "speech": 0.0,
+            "proprio": 0.5,
+            "impact": 0.6666666666666666
+          },
+          "per_encoder_count": {
+            "points": 10,
+            "vision": 10,
+            "force": 10,
+            "tactile": 5,
+            "mesh": 10,
+            "speech": 10,
+            "proprio": 10,
+            "impact": 3
+          },
+          "agrees_original_answer_fraction": 0.3382352941176471
+        },
+        "test_visual_ood/full_matched/T8": {
+          "questions": 49,
+          "episodes": 9,
+          "micro_accuracy": 0.24489795918367346,
+          "encoder_macro_accuracy": 0.2222222222222222,
+          "encoder_macro_episode_bootstrap_ci95": [
+            0.1851851851851852,
+            0.27777777777777773
+          ],
+          "per_encoder_accuracy": {
+            "points": 0.1111111111111111,
+            "mesh": 0.3333333333333333,
+            "speech": 0.0,
+            "timeseries": 0.0,
+            "proprio": 0.8888888888888888,
+            "vision": 0.0
+          },
+          "per_encoder_count": {
+            "points": 9,
+            "mesh": 9,
+            "speech": 9,
+            "timeseries": 4,
+            "proprio": 9,
+            "vision": 9
+          },
+          "agrees_original_answer_fraction": 0.24489795918367346
+        }
+      },
+      "training": {
+        "joint_completed_step": 1300,
+        "joint_selected_step": 800,
+        "action_completed_step": 4800,
+        "action_selected_step": 4500,
+        "action_global_batch": 512,
+        "joint_global_ee_batch": 256,
+        "global_qa_batch": 128,
+        "world_size": 16,
+        "seed": 42,
+        "selection": "Validation only",
+        "stop_reason": "Validation patience",
+        "execution_test_note": "Post-hoc Joint-to-Action continuation; selected only by validation EE MAE, evaluated on original209 scenarios previously used for v1 diagnosis. Not a new unseen test set."
+      }
+    }
+  ],
+  "pending": []
+}
