@@ -36,6 +36,40 @@ On the existing 209 frozen execution scenarios, Joint-to-Action succeeds on 132 
 
 These retention results measure the action-specialized checkpoint; they are not the QA-only results above. Detailed per-task execution results, offline EE metrics, per-category QA, feature interventions and inference-time modality removals are in `results/qwen35_4b_joint_action.json`. The completed track contains no standalone joint-result showcase.
 
+## Qwen2.5-0.5B teammate run
+
+Fresh-start run of the three public tracks with `configs/teammate_qwen25_05b_a100.yaml` (seed 42), one NVIDIA
+A100-SXM4-40GB per track. Measurements in `results/qwen25_05b_teammate.json`.
+
+| Track | Selected update | All (209) | IID (69) | Compositional (70) | Visual OOD (70) |
+|---|---:|---:|---:|---:|---:|
+| Action-only | action 5,500 | 116/209 (55.5%) | 67/69 (97.1%) | 38/70 (54.3%) | 11/70 (15.7%) |
+| Joint-to-Action | joint 1,700, action 2,400 | 126/209 (60.3%) | 61/69 (88.4%) | 39/70 (55.7%) | 26/70 (37.1%) |
+
+Execution uses Wilson 95% intervals in the JSON (not the episode bootstrap of the historical profiles).
+
+| QA metric (full observation) | IID | Compositional | Visual OOD |
+|---|---:|---:|---:|
+| QA-only (update 1,800), encoder-category macro | 63.1% | 55.2% | 44.0% |
+| QA-only, question-weighted micro | 67.8% | 63.5% | 33.6% |
+| Joint-to-Action checkpoint (retention), macro | 46.3% | 41.5% | 32.2% |
+
+Offline EE absolute-target MAE: Action-only 0.039 / 0.175 / 0.221 cm and Joint-to-Action 0.048 / 0.144 / 0.143 cm
+(IID / compositional / visual OOD). In the QA-only isolated-zero control, IID accuracy drops to 6.5% (micro).
+
+Differences from the snapshot recipe, all recorded in the JSON:
+- The dataset artifacts were regenerated from the two raw shards with `dataset prepare`. Episode membership matches
+  `metadata/episodes.csv` (678 references, 209 execution scenarios), but the generated primary QA has 4,449 items
+  (train 2,776, val 415, IID 416, compositional 419, visual OOD 423) instead of 4,469, so `data.strict_snapshot` is off.
+- Micro batches QA 2 -> 32 and EE 4 -> 64 (validation / evaluation 4 -> 32) with the global batches unchanged (128 / 256).
+- `omnibench/cli.py` sets `allow_abbrev=False`; without it the worker flag `--mode` was parsed as `--model` and every
+  training stage failed to start.
+- Python 3.11 and PyTorch 2.8 (Transformers 5.3.0, PEFT 0.18.1) instead of the reference PyTorch 2.7.1.
+
+Wall clock including evaluation: QA-only 1 h 37 min, Action-only 3 h 44 min, Joint-to-Action 5 h 03 min. As with the
+other profiles, these numbers come from one seed and a different optimization history, so they are not a controlled
+model-size comparison.
+
 ## Training provenance
 
 The phase-step number below counts updates in the named phase; it is not the complete optimization history. All showcase runs use seed 42. Prior task-specific warm starts are recorded as training provenance, without including exploratory artifacts.

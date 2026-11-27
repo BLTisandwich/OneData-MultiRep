@@ -11,6 +11,9 @@ This repository provides three experiment tracks: **Action-only**, **QA-only**, 
 | Qwen3.5-2B | Joint-to-Action | 130/209 (62.2%) | 67.7% |
 | Llama-3.2-3B-Instruct | Action-only | 112/209 (53.6%) | 71.2% |
 | Qwen3.5-4B | Joint-to-Action | 132/209 (63.2%) | 66.6% |
+| Qwen2.5-0.5B-Instruct (teammate run) | Joint-to-Action | 126/209 (60.3%) | 63.1% |
+
+The Qwen2.5-0.5B row is a teammate run of the default fresh-start recipe on one A100 with regenerated dataset artifacts and larger micro batches; see [Results](docs/RESULTS.md#qwen25-05b-teammate-run) and [its JSON](results/qwen25_05b_teammate.json).
 
 Execution and QA columns use **separate checkpoints**. These are selected completed configurations with different training histories, not a matched-budget ranking. All held-out split results for these configurations are retained in [Results](docs/RESULTS.md) and [aggregate JSON](results/selected_results.json). Qwen3.5-4B Joint-to-Action is complete: 132/209 execution successes. Its same-checkpoint QA retention is reported separately in Results; the QA-only column above uses a different checkpoint.
 

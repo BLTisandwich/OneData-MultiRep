@@ -33,7 +33,7 @@ def fetch(model,encoders=False):
 def main(argv=None):
     from .settings import configure,CONFIG,model_spec
     arguments=list(sys.argv[1:] if argv is None else argv)
-    common=argparse.ArgumentParser(add_help=False)
+    common=argparse.ArgumentParser(add_help=False,allow_abbrev=False)  # '--mode' of _train must not abbreviate '--model'
     common.add_argument('--config');common.add_argument('--model')
     options,arguments=common.parse_known_args(arguments)
     configure(options.config)
