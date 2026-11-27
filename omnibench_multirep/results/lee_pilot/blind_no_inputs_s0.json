@@ -1,0 +1,212 @@
+{
+ "setting": "blind (no inputs)",
+ "budget": 2000000.0,
+ "width": 64,
+ "params": 116801,
+ "params_core": 1024,
+ "params_interface": 115777,
+ "budget_scope": "core",
+ "enc_params": {},
+ "tag": "omni_v1_ep15_amp1_qc1_os1_gc1_bal1_s0_Qwen2.5-0.5B-Instruct_bcore",
+ "seed": 0,
+ "backbone": "Qwen2.5-0.5B-Instruct",
+ "llm_name": "Qwen/Qwen2.5-0.5B-Instruct",
+ "llm_dim": 896,
+ "data": "omni_v1",
+ "data_seed": 0,
+ "balance": true,
+ "secs": 264.4681897163391,
+ "curve": [
+  {
+   "epoch": 1,
+   "task": 0.0,
+   "color": 0.0,
+   "motion": 0.0,
+   "next_action": 0.0,
+   "goal_side": 0.0,
+   "goal_dist": 0.0,
+   "avg": 0.0
+  },
+  {
+   "epoch": 2,
+   "task": 0.0,
+   "color": 0.32,
+   "motion": 0.125,
+   "next_action": 0.0,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.5217391304347826,
+   "avg": 0.24591851004322404
+  },
+  {
+   "epoch": 3,
+   "task": 0.0,
+   "color": 0.32,
+   "motion": 0.3,
+   "next_action": 0.0,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.26783879989829645
+  },
+  {
+   "epoch": 4,
+   "task": 0.0,
+   "color": 0.32,
+   "motion": 0.125,
+   "next_action": 0.0,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.2386721332316298
+  },
+  {
+   "epoch": 5,
+   "task": 0.0,
+   "color": 0.32,
+   "motion": 0.125,
+   "next_action": 0.0,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.2386721332316298
+  },
+  {
+   "epoch": 6,
+   "task": 0.0,
+   "color": 0.32,
+   "motion": 0.125,
+   "next_action": 0.0,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.5217391304347826,
+   "avg": 0.24591851004322404
+  },
+  {
+   "epoch": 7,
+   "task": 0.0,
+   "color": 0.32,
+   "motion": 0.125,
+   "next_action": 0.0,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.2386721332316298
+  },
+  {
+   "epoch": 8,
+   "task": 0.0,
+   "color": 0.32,
+   "motion": 0.125,
+   "next_action": 0.0,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.23574815662344265
+  },
+  {
+   "epoch": 9,
+   "task": 0.0,
+   "color": 0.32,
+   "motion": 0.125,
+   "next_action": 0.0,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.2386721332316298
+  },
+  {
+   "epoch": 10,
+   "task": 0.1864406779661017,
+   "color": 0.42,
+   "motion": 0.125,
+   "next_action": 0.0,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.2864122462259801
+  },
+  {
+   "epoch": 11,
+   "task": 0.1864406779661017,
+   "color": 0.32,
+   "motion": 0.3,
+   "next_action": 0.0,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.29598826961779295
+  },
+  {
+   "epoch": 12,
+   "task": 0.22033898305084745,
+   "color": 0.26,
+   "motion": 0.125,
+   "next_action": 0.0625,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.5217391304347826,
+   "avg": 0.2830583405516986
+  },
+  {
+   "epoch": 13,
+   "task": 0.1864406779661017,
+   "color": 0.32,
+   "motion": 0.125,
+   "next_action": 0.08333333333333333,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.2807104918400152
+  },
+  {
+   "epoch": 14,
+   "task": 0.1864406779661017,
+   "color": 0.32,
+   "motion": 0.275,
+   "next_action": 0.0625,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.30223826961779293
+  },
+  {
+   "epoch": 15,
+   "task": 0.1864406779661017,
+   "color": 0.42,
+   "motion": 0.275,
+   "next_action": 0.0,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.3084882696177929
+  }
+ ],
+ "ckpt": "ckpt_robot/omni_v1_ep15_amp1_qc1_os1_gc1_bal1_s0_Qwen2.5-0.5B-Instruct_bcore/blind_no_inputs__2M.pt",
+ "task": 0.25333333333333335,
+ "color": 0.3333333333333333,
+ "motion": 0.24666666666666667,
+ "next_action": 0.0,
+ "goal_side": 0.5,
+ "goal_dist": 0.5,
+ "avg": 0.3055555555555556,
+ "ood": {
+  "test_compositional": {
+   "task": 0.25333333333333335,
+   "color": 0.3333333333333333,
+   "motion": 0.16666666666666666,
+   "next_action": 0.0,
+   "goal_side": 1.0,
+   "goal_dist": 1.0,
+   "avg": 0.4588888888888889
+  },
+  "test_visual_ood": {
+   "task": 0.25333333333333335,
+   "color": 0.0,
+   "motion": 0.24666666666666667,
+   "next_action": 0.0,
+   "goal_side": 0.5,
+   "goal_dist": 0.5,
+   "avg": 0.25
+  }
+ },
+ "reps": [],
+ "agg": "mlp",
+ "fusion": null,
+ "options": {},
+ "hardware": {
+  "device": "NVIDIA A100-SXM4-40GB",
+  "torch": "2.8.0+cu128",
+  "transformers": "4.57.3",
+  "python": "3.11.13",
+  "llm_dtype": "torch.float32",
+  "amp": true
+ },
+ "finished": "2026-11-27T00:48:02"
+}

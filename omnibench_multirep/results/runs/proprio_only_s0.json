@@ -1,0 +1,261 @@
+{
+ "setting": "proprio only",
+ "budget": 2000000.0,
+ "width": 328,
+ "params": 2547161,
+ "params_core": 1957504,
+ "params_interface": 589657,
+ "budget_scope": "core",
+ "enc_params": {
+  "proprio": 654032
+ },
+ "tag": "omni_v1_ep15_amp1_qc1_os1_gc1_bal1_s0_Qwen2.5-0.5B-Instruct_bcore",
+ "seed": 0,
+ "backbone": "Qwen2.5-0.5B-Instruct",
+ "llm_name": "Qwen/Qwen2.5-0.5B-Instruct",
+ "llm_dim": 896,
+ "data": "omni_v1",
+ "data_seed": 0,
+ "balance": true,
+ "secs": 284.93972611427307,
+ "curve": [
+  {
+   "epoch": 1,
+   "task": 0.3559322033898305,
+   "color": 0.34,
+   "motion": 0.65,
+   "next_action": 0.2708333333333333,
+   "goal_side": 0.5263157894736842,
+   "goal_dist": 0.5217391304347826,
+   "avg": 0.4441367427719385,
+   "aux_train_acc": {
+    "proprio": 0.3947732300884956
+   }
+  },
+  {
+   "epoch": 2,
+   "task": 0.4915254237288136,
+   "color": 0.38,
+   "motion": 0.675,
+   "next_action": 0.6458333333333334,
+   "goal_side": 0.3684210526315789,
+   "goal_dist": 0.5869565217391305,
+   "avg": 0.5246227219054761,
+   "aux_train_acc": {
+    "proprio": 0.6032909292035398
+   }
+  },
+  {
+   "epoch": 3,
+   "task": 0.4067796610169492,
+   "color": 0.44,
+   "motion": 0.9,
+   "next_action": 0.6875,
+   "goal_side": 0.543859649122807,
+   "goal_dist": 0.8695652173913043,
+   "avg": 0.6412840879218434,
+   "aux_train_acc": {
+    "proprio": 0.6374446902654868
+   }
+  },
+  {
+   "epoch": 4,
+   "task": 0.4406779661016949,
+   "color": 0.44,
+   "motion": 0.95,
+   "next_action": 0.8541666666666666,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.6521739130434783,
+   "avg": 0.6380411026645464,
+   "aux_train_acc": {
+    "proprio": 0.6605365044247787
+   }
+  },
+  {
+   "epoch": 5,
+   "task": 0.4745762711864407,
+   "color": 0.42,
+   "motion": 0.975,
+   "next_action": 0.8541666666666666,
+   "goal_side": 0.5964912280701754,
+   "goal_dist": 0.8260869565217391,
+   "avg": 0.6910535204075036,
+   "aux_train_acc": {
+    "proprio": 0.6814159292035398
+   }
+  },
+  {
+   "epoch": 6,
+   "task": 0.4745762711864407,
+   "color": 0.4,
+   "motion": 0.975,
+   "next_action": 0.7708333333333334,
+   "goal_side": 0.5964912280701754,
+   "goal_dist": 0.6304347826086957,
+   "avg": 0.6412226025331076,
+   "aux_train_acc": {
+    "proprio": 0.6937223451327433
+   }
+  },
+  {
+   "epoch": 7,
+   "task": 0.4745762711864407,
+   "color": 0.32,
+   "motion": 0.975,
+   "next_action": 0.8125,
+   "goal_side": 0.543859649122807,
+   "goal_dist": 0.8913043478260869,
+   "avg": 0.6695400446892225,
+   "aux_train_acc": {
+    "proprio": 0.7119745575221239
+   }
+  },
+  {
+   "epoch": 8,
+   "task": 0.4915254237288136,
+   "color": 0.3,
+   "motion": 0.975,
+   "next_action": 0.7708333333333334,
+   "goal_side": 0.6491228070175439,
+   "goal_dist": 0.782608695652174,
+   "avg": 0.6615150432886442,
+   "aux_train_acc": {
+    "proprio": 0.7213772123893806
+   }
+  },
+  {
+   "epoch": 9,
+   "task": 0.4915254237288136,
+   "color": 0.34,
+   "motion": 1.0,
+   "next_action": 0.8541666666666666,
+   "goal_side": 0.5964912280701754,
+   "goal_dist": 0.8695652173913043,
+   "avg": 0.6919580893094933,
+   "aux_train_acc": {
+    "proprio": 0.7289823008849557
+   }
+  },
+  {
+   "epoch": 10,
+   "task": 0.4915254237288136,
+   "color": 0.34,
+   "motion": 1.0,
+   "next_action": 0.8541666666666666,
+   "goal_side": 0.6140350877192983,
+   "goal_dist": 0.8695652173913043,
+   "avg": 0.6948820659176805,
+   "aux_train_acc": {
+    "proprio": 0.7459900442477876
+   }
+  },
+  {
+   "epoch": 11,
+   "task": 0.4406779661016949,
+   "color": 0.36,
+   "motion": 1.0,
+   "next_action": 0.7916666666666666,
+   "goal_side": 0.631578947368421,
+   "goal_dist": 0.8913043478260869,
+   "avg": 0.6858713213271449,
+   "aux_train_acc": {
+    "proprio": 0.7517975663716814
+   }
+  },
+  {
+   "epoch": 12,
+   "task": 0.4745762711864407,
+   "color": 0.3,
+   "motion": 0.975,
+   "next_action": 0.8541666666666666,
+   "goal_side": 0.6140350877192983,
+   "goal_dist": 0.8913043478260869,
+   "avg": 0.6848470622330821,
+   "aux_train_acc": {
+    "proprio": 0.7625829646017699
+   }
+  },
+  {
+   "epoch": 13,
+   "task": 0.4915254237288136,
+   "color": 0.34,
+   "motion": 1.0,
+   "next_action": 0.8958333333333334,
+   "goal_side": 0.5964912280701754,
+   "goal_dist": 0.8913043478260869,
+   "avg": 0.7025257221597349,
+   "aux_train_acc": {
+    "proprio": 0.7729535398230089
+   }
+  },
+  {
+   "epoch": 14,
+   "task": 0.576271186440678,
+   "color": 0.32,
+   "motion": 1.0,
+   "next_action": 0.8958333333333334,
+   "goal_side": 0.5964912280701754,
+   "goal_dist": 0.8913043478260869,
+   "avg": 0.7133166826117123,
+   "aux_train_acc": {
+    "proprio": 0.7762721238938053
+   }
+  },
+  {
+   "epoch": 15,
+   "task": 0.5423728813559322,
+   "color": 0.32,
+   "motion": 1.0,
+   "next_action": 0.9166666666666666,
+   "goal_side": 0.631578947368421,
+   "goal_dist": 0.8913043478260869,
+   "avg": 0.7169871405361845,
+   "aux_train_acc": {
+    "proprio": 0.7794524336283186
+   }
+  }
+ ],
+ "ckpt": "ckpt_robot/omni_v1_ep15_amp1_qc1_os1_gc1_bal1_s0_Qwen2.5-0.5B-Instruct_bcore/proprio_only__2M.pt",
+ "task": 0.5933333333333334,
+ "color": 0.30666666666666664,
+ "motion": 1.0,
+ "next_action": 0.9,
+ "goal_side": 0.62,
+ "goal_dist": 0.9,
+ "avg": 0.7200000000000001,
+ "ood": {
+  "test_compositional": {
+   "task": 0.4266666666666667,
+   "color": 0.32666666666666666,
+   "motion": 0.5866666666666667,
+   "next_action": 0.74,
+   "goal_side": 0.41333333333333333,
+   "goal_dist": 0.3933333333333333,
+   "avg": 0.4811111111111111
+  },
+  "test_visual_ood": {
+   "task": 0.56,
+   "color": 0.0,
+   "motion": 1.0,
+   "next_action": 0.8333333333333334,
+   "goal_side": 0.6266666666666667,
+   "goal_dist": 0.6466666666666666,
+   "avg": 0.6111111111111112
+  }
+ },
+ "reps": [
+  "proprio"
+ ],
+ "agg": "qformer",
+ "fusion": null,
+ "options": {},
+ "hardware": {
+  "device": "NVIDIA A100-SXM4-40GB",
+  "torch": "2.8.0+cu128",
+  "transformers": "4.57.3",
+  "python": "3.11.13",
+  "llm_dtype": "torch.float32",
+  "amp": true
+ },
+ "finished": "2026-11-27T01:31:04"
+}

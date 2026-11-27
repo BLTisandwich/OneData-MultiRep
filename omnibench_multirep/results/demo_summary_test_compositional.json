@@ -1,0 +1,1096 @@
+{
+ "label": "Frozen Qwen2.5-0.5B-Instruct + adaptor: ours (all 4, Q-Former, per-rep queries), router lambda*=0.3",
+ "use": {
+  "task": [
+   "speech"
+  ],
+  "color": [
+   "speech"
+  ],
+  "motion": [
+   "point",
+   "proprio"
+  ],
+  "next_action": [
+   "point",
+   "proprio",
+   "speech"
+  ],
+  "goal_side": [
+   "point"
+  ],
+  "goal_dist": [
+   "point"
+  ]
+ },
+ "baselines": [
+  "blind",
+  "proprio",
+  "point",
+  "view",
+  "speech"
+ ],
+ "episodes": {
+  "T1_0080": {
+   "task": "pick place",
+   "split": "test_compositional",
+   "instruction": "Pick up the blue cube and place it on the green target marker.",
+   "accuracy": {
+    "task": [
+     1.0,
+     96
+    ],
+    "color": [
+     1.0,
+     96
+    ],
+    "motion": [
+     0.5797101449275363,
+     69
+    ],
+    "next_action": [
+     0.6,
+     90
+    ],
+    "goal_side": [
+     1.0,
+     28
+    ],
+    "goal_dist": [
+     1.0,
+     28
+    ]
+   },
+   "overall": 0.8402948402948403,
+   "baselines": {
+    "blind": {
+     "accuracy": {
+      "task": [
+       1.0,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.34782608695652173,
+       69
+      ],
+      "next_action": [
+       0.0,
+       90
+      ],
+      "goal_side": [
+       0.0,
+       28
+      ],
+      "goal_dist": [
+       1.0,
+       28
+      ]
+     },
+     "overall": 0.5995085995085995
+    },
+    "proprio": {
+     "accuracy": {
+      "task": [
+       0.17708333333333334,
+       96
+      ],
+      "color": [
+       0.3125,
+       96
+      ],
+      "motion": [
+       0.5507246376811594,
+       69
+      ],
+      "next_action": [
+       0.6666666666666666,
+       90
+      ],
+      "goal_side": [
+       0.0,
+       28
+      ],
+      "goal_dist": [
+       0.0,
+       28
+      ]
+     },
+     "overall": 0.35626535626535627
+    },
+    "point": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.4057971014492754,
+       69
+      ],
+      "next_action": [
+       0.044444444444444446,
+       90
+      ],
+      "goal_side": [
+       1.0,
+       28
+      ],
+      "goal_dist": [
+       0.6785714285714286,
+       28
+      ]
+     },
+     "overall": 0.42997542997543
+    },
+    "view": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.9270833333333334,
+       96
+      ],
+      "motion": [
+       0.10144927536231885,
+       69
+      ],
+      "next_action": [
+       0.05555555555555555,
+       90
+      ],
+      "goal_side": [
+       0.0,
+       28
+      ],
+      "goal_dist": [
+       1.0,
+       28
+      ]
+     },
+     "overall": 0.31695331695331697
+    },
+    "speech": {
+     "accuracy": {
+      "task": [
+       1.0,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.4782608695652174,
+       69
+      ],
+      "next_action": [
+       0.044444444444444446,
+       90
+      ],
+      "goal_side": [
+       0.0,
+       28
+      ],
+      "goal_dist": [
+       0.0,
+       28
+      ]
+     },
+     "overall": 0.5626535626535627
+    }
+   }
+  },
+  "T2_0080": {
+   "task": "push slide",
+   "split": "test_compositional",
+   "instruction": "Push the green cube across the table to the green marker.",
+   "accuracy": {
+    "task": [
+     1.0,
+     96
+    ],
+    "color": [
+     1.0,
+     96
+    ],
+    "motion": [
+     0.9661016949152542,
+     59
+    ],
+    "next_action": [
+     0.8111111111111111,
+     90
+    ]
+   },
+   "overall": 0.9442815249266863,
+   "baselines": {
+    "blind": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.0,
+       96
+      ],
+      "motion": [
+       0.22033898305084745,
+       59
+      ],
+      "next_action": [
+       0.4444444444444444,
+       90
+      ]
+     },
+     "overall": 0.15542521994134897
+    },
+    "proprio": {
+     "accuracy": {
+      "task": [
+       1.0,
+       96
+      ],
+      "color": [
+       0.041666666666666664,
+       96
+      ],
+      "motion": [
+       1.0,
+       59
+      ],
+      "next_action": [
+       0.8222222222222222,
+       90
+      ]
+     },
+     "overall": 0.6832844574780058
+    },
+    "point": {
+     "accuracy": {
+      "task": [
+       0.9166666666666666,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.9322033898305084,
+       59
+      ],
+      "next_action": [
+       0.7333333333333333,
+       90
+      ]
+     },
+     "overall": 0.8944281524926686
+    },
+    "view": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.052083333333333336,
+       96
+      ],
+      "motion": [
+       0.03389830508474576,
+       59
+      ],
+      "next_action": [
+       0.0,
+       90
+      ]
+     },
+     "overall": 0.020527859237536656
+    },
+    "speech": {
+     "accuracy": {
+      "task": [
+       1.0,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.5423728813559322,
+       59
+      ],
+      "next_action": [
+       0.1,
+       90
+      ]
+     },
+     "overall": 0.6832844574780058
+    }
+   }
+  },
+  "T3_0080": {
+   "task": "stack",
+   "split": "test_compositional",
+   "instruction": "Stack the green cube on top of the gray stationary support.",
+   "accuracy": {
+    "task": [
+     1.0,
+     96
+    ],
+    "color": [
+     1.0,
+     96
+    ],
+    "motion": [
+     0.391304347826087,
+     69
+    ],
+    "next_action": [
+     0.6222222222222222,
+     90
+    ],
+    "goal_side": [
+     1.0,
+     28
+    ],
+    "goal_dist": [
+     0.9642857142857143,
+     28
+    ]
+   },
+   "overall": 0.8108108108108109,
+   "baselines": {
+    "blind": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.0,
+       96
+      ],
+      "motion": [
+       0.3333333333333333,
+       69
+      ],
+      "next_action": [
+       0.0,
+       90
+      ],
+      "goal_side": [
+       0.0,
+       28
+      ],
+      "goal_dist": [
+       1.0,
+       28
+      ]
+     },
+     "overall": 0.12530712530712532
+    },
+    "proprio": {
+     "accuracy": {
+      "task": [
+       0.09375,
+       96
+      ],
+      "color": [
+       0.15625,
+       96
+      ],
+      "motion": [
+       0.4492753623188406,
+       69
+      ],
+      "next_action": [
+       0.6444444444444445,
+       90
+      ],
+      "goal_side": [
+       1.0,
+       28
+      ],
+      "goal_dist": [
+       1.0,
+       28
+      ]
+     },
+     "overall": 0.4152334152334152
+    },
+    "point": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.3333333333333333,
+       69
+      ],
+      "next_action": [
+       0.044444444444444446,
+       90
+      ],
+      "goal_side": [
+       1.0,
+       28
+      ],
+      "goal_dist": [
+       1.0,
+       28
+      ]
+     },
+     "overall": 0.4398034398034398
+    },
+    "view": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.07291666666666667,
+       96
+      ],
+      "motion": [
+       0.15942028985507245,
+       69
+      ],
+      "next_action": [
+       0.06666666666666667,
+       90
+      ],
+      "goal_side": [
+       0.0,
+       28
+      ],
+      "goal_dist": [
+       1.0,
+       28
+      ]
+     },
+     "overall": 0.12776412776412777
+    },
+    "speech": {
+     "accuracy": {
+      "task": [
+       1.0,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.42028985507246375,
+       69
+      ],
+      "next_action": [
+       0.05555555555555555,
+       90
+      ],
+      "goal_side": [
+       1.0,
+       28
+      ],
+      "goal_dist": [
+       1.0,
+       28
+      ]
+     },
+     "overall": 0.6928746928746928
+    }
+   }
+  },
+  "T4_0080": {
+   "task": "place container",
+   "split": "test_compositional",
+   "instruction": "Pick up the blue cube and drop it inside the gray open container.",
+   "accuracy": {
+    "task": [
+     1.0,
+     96
+    ],
+    "color": [
+     1.0,
+     96
+    ],
+    "motion": [
+     0.3968253968253968,
+     63
+    ],
+    "next_action": [
+     0.6,
+     90
+    ],
+    "goal_side": [
+     1.0,
+     28
+    ],
+    "goal_dist": [
+     1.0,
+     28
+    ]
+   },
+   "overall": 0.8154613466334164,
+   "baselines": {
+    "blind": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.36507936507936506,
+       63
+      ],
+      "next_action": [
+       0.0,
+       90
+      ],
+      "goal_side": [
+       0.0,
+       28
+      ],
+      "goal_dist": [
+       1.0,
+       28
+      ]
+     },
+     "overall": 0.36658354114713215
+    },
+    "proprio": {
+     "accuracy": {
+      "task": [
+       0.40625,
+       96
+      ],
+      "color": [
+       0.4791666666666667,
+       96
+      ],
+      "motion": [
+       0.5238095238095238,
+       63
+      ],
+      "next_action": [
+       0.6555555555555556,
+       90
+      ],
+      "goal_side": [
+       0.0,
+       28
+      ],
+      "goal_dist": [
+       0.0,
+       28
+      ]
+     },
+     "overall": 0.44139650872817954
+    },
+    "point": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.3333333333333333,
+       63
+      ],
+      "next_action": [
+       0.03333333333333333,
+       90
+      ],
+      "goal_side": [
+       1.0,
+       28
+      ],
+      "goal_dist": [
+       0.7142857142857143,
+       28
+      ]
+     },
+     "overall": 0.41895261845386533
+    },
+    "view": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.9479166666666666,
+       96
+      ],
+      "motion": [
+       0.25396825396825395,
+       63
+      ],
+      "next_action": [
+       0.06666666666666667,
+       90
+      ],
+      "goal_side": [
+       0.0,
+       28
+      ],
+      "goal_dist": [
+       1.0,
+       28
+      ]
+     },
+     "overall": 0.3516209476309227
+    },
+    "speech": {
+     "accuracy": {
+      "task": [
+       1.0,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.4603174603174603,
+       63
+      ],
+      "next_action": [
+       0.07777777777777778,
+       90
+      ],
+      "goal_side": [
+       0.0,
+       28
+      ],
+      "goal_dist": [
+       1.0,
+       28
+      ]
+     },
+     "overall": 0.6384039900249376
+    }
+   }
+  },
+  "T5_0080": {
+   "task": "press button",
+   "split": "test_compositional",
+   "instruction": "Press the orange button until it activates.",
+   "accuracy": {
+    "task": [
+     1.0,
+     96
+    ],
+    "color": [
+     1.0,
+     96
+    ],
+    "motion": [
+     1.0,
+     37
+    ],
+    "next_action": [
+     0.7888888888888889,
+     90
+    ]
+   },
+   "overall": 0.9404388714733543,
+   "baselines": {
+    "blind": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.0,
+       96
+      ],
+      "motion": [
+       0.2972972972972973,
+       37
+      ],
+      "next_action": [
+       0.0,
+       90
+      ]
+     },
+     "overall": 0.034482758620689655
+    },
+    "proprio": {
+     "accuracy": {
+      "task": [
+       0.8125,
+       96
+      ],
+      "color": [
+       0.15625,
+       96
+      ],
+      "motion": [
+       1.0,
+       37
+      ],
+      "next_action": [
+       0.8888888888888888,
+       90
+      ]
+     },
+     "overall": 0.658307210031348
+    },
+    "point": {
+     "accuracy": {
+      "task": [
+       0.875,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.6756756756756757,
+       37
+      ],
+      "next_action": [
+       0.4777777777777778,
+       90
+      ]
+     },
+     "overall": 0.7774294670846394
+    },
+    "view": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.0,
+       96
+      ],
+      "motion": [
+       0.21621621621621623,
+       37
+      ],
+      "next_action": [
+       0.0,
+       90
+      ]
+     },
+     "overall": 0.025078369905956112
+    },
+    "speech": {
+     "accuracy": {
+      "task": [
+       1.0,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.2972972972972973,
+       37
+      ],
+      "next_action": [
+       0.13333333333333333,
+       90
+      ]
+     },
+     "overall": 0.6739811912225705
+    }
+   }
+  },
+  "T6_0080": {
+   "task": "tap knock",
+   "split": "test_compositional",
+   "instruction": "Tap the green cube once and then retract the end-effector.",
+   "accuracy": {
+    "task": [
+     1.0,
+     96
+    ],
+    "color": [
+     1.0,
+     96
+    ],
+    "motion": [
+     0.9714285714285714,
+     35
+    ],
+    "next_action": [
+     0.8222222222222222,
+     90
+    ]
+   },
+   "overall": 0.9463722397476341,
+   "baselines": {
+    "blind": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.0,
+       96
+      ],
+      "motion": [
+       0.3142857142857143,
+       35
+      ],
+      "next_action": [
+       0.0,
+       90
+      ]
+     },
+     "overall": 0.03470031545741325
+    },
+    "proprio": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.3125,
+       96
+      ],
+      "motion": [
+       1.0,
+       35
+      ],
+      "next_action": [
+       0.6444444444444445,
+       90
+      ]
+     },
+     "overall": 0.38801261829652994
+    },
+    "point": {
+     "accuracy": {
+      "task": [
+       0.07291666666666667,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.8,
+       35
+      ],
+      "next_action": [
+       0.4444444444444444,
+       90
+      ]
+     },
+     "overall": 0.5394321766561514
+    },
+    "view": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.0,
+       96
+      ],
+      "motion": [
+       0.34285714285714286,
+       35
+      ],
+      "next_action": [
+       0.03333333333333333,
+       90
+      ]
+     },
+     "overall": 0.0473186119873817
+    },
+    "speech": {
+     "accuracy": {
+      "task": [
+       1.0,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.3142857142857143,
+       35
+      ],
+      "next_action": [
+       0.07777777777777778,
+       90
+      ]
+     },
+     "overall": 0.6624605678233438
+    }
+   }
+  },
+  "T8_0081": {
+   "task": "drag pull",
+   "split": "test_compositional",
+   "instruction": "Grip the orange cube and drag it over the tabletop to the green marker.",
+   "accuracy": {
+    "task": [
+     1.0,
+     96
+    ],
+    "color": [
+     1.0,
+     96
+    ],
+    "motion": [
+     0.9795918367346939,
+     49
+    ],
+    "next_action": [
+     0.8666666666666667,
+     90
+    ]
+   },
+   "overall": 0.9607250755287009,
+   "baselines": {
+    "blind": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.0,
+       96
+      ],
+      "motion": [
+       0.22448979591836735,
+       49
+      ],
+      "next_action": [
+       0.0,
+       90
+      ]
+     },
+     "overall": 0.03323262839879154
+    },
+    "proprio": {
+     "accuracy": {
+      "task": [
+       0.6770833333333334,
+       96
+      ],
+      "color": [
+       0.4166666666666667,
+       96
+      ],
+      "motion": [
+       0.9795918367346939,
+       49
+      ],
+      "next_action": [
+       0.9,
+       90
+      ]
+     },
+     "overall": 0.7069486404833837
+    },
+    "point": {
+     "accuracy": {
+      "task": [
+       0.7083333333333334,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.8979591836734694,
+       49
+      ],
+      "next_action": [
+       0.32222222222222224,
+       90
+      ]
+     },
+     "overall": 0.716012084592145
+    },
+    "view": {
+     "accuracy": {
+      "task": [
+       0.0,
+       96
+      ],
+      "color": [
+       0.0,
+       96
+      ],
+      "motion": [
+       0.14285714285714285,
+       49
+      ],
+      "next_action": [
+       0.05555555555555555,
+       90
+      ]
+     },
+     "overall": 0.03625377643504532
+    },
+    "speech": {
+     "accuracy": {
+      "task": [
+       1.0,
+       96
+      ],
+      "color": [
+       1.0,
+       96
+      ],
+      "motion": [
+       0.3469387755102041,
+       49
+      ],
+      "next_action": [
+       0.15555555555555556,
+       90
+      ]
+     },
+     "overall": 0.6737160120845922
+    }
+   }
+  }
+ }
+}

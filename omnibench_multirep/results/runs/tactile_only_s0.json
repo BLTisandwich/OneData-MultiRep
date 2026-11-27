@@ -1,0 +1,261 @@
+{
+ "setting": "tactile only",
+ "budget": 2000000.0,
+ "width": 312,
+ "params": 2550171,
+ "params_core": 1989234,
+ "params_interface": 560937,
+ "budget_scope": "core",
+ "enc_params": {
+  "tactile": 809250
+ },
+ "tag": "omni_v1_ep15_amp1_qc1_os1_gc1_bal1_s0_Qwen2.5-0.5B-Instruct_bcore",
+ "seed": 0,
+ "backbone": "Qwen2.5-0.5B-Instruct",
+ "llm_name": "Qwen/Qwen2.5-0.5B-Instruct",
+ "llm_dim": 896,
+ "data": "omni_v1",
+ "data_seed": 0,
+ "balance": true,
+ "secs": 264.1709234714508,
+ "curve": [
+  {
+   "epoch": 1,
+   "task": 0.0,
+   "color": 0.42,
+   "motion": 0.3,
+   "next_action": 0.0,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.2845054665649631,
+   "aux_train_acc": {
+    "tactile": 0.24875553097345132
+   }
+  },
+  {
+   "epoch": 2,
+   "task": 0.1864406779661017,
+   "color": 0.36,
+   "motion": 0.475,
+   "next_action": 0.16666666666666666,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.5217391304347826,
+   "avg": 0.3697697341486854,
+   "aux_train_acc": {
+    "tactile": 0.33476216814159293
+   }
+  },
+  {
+   "epoch": 3,
+   "task": 0.2033898305084746,
+   "color": 0.42,
+   "motion": 0.225,
+   "next_action": 0.16666666666666666,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.3307575728192995,
+   "aux_train_acc": {
+    "tactile": 0.359375
+   }
+  },
+  {
+   "epoch": 4,
+   "task": 0.22033898305084745,
+   "color": 0.32,
+   "motion": 0.4,
+   "next_action": 0.375,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.3837286304067711,
+   "aux_train_acc": {
+    "tactile": 0.3689159292035398
+   }
+  },
+  {
+   "epoch": 5,
+   "task": 0.22033898305084745,
+   "color": 0.34,
+   "motion": 0.475,
+   "next_action": 0.2916666666666667,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.5217391304347826,
+   "avg": 0.39291945166280967,
+   "aux_train_acc": {
+    "tactile": 0.3834347345132743
+   }
+  },
+  {
+   "epoch": 6,
+   "task": 0.2033898305084746,
+   "color": 0.42,
+   "motion": 0.325,
+   "next_action": 0.3541666666666667,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.38159821609415334,
+   "aux_train_acc": {
+    "tactile": 0.3856471238938053
+   }
+  },
+  {
+   "epoch": 7,
+   "task": 0.1864406779661017,
+   "color": 0.32,
+   "motion": 0.475,
+   "next_action": 0.375,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.5217391304347826,
+   "avg": 0.3978252897042409,
+   "aux_train_acc": {
+    "tactile": 0.3844026548672566
+   }
+  },
+  {
+   "epoch": 8,
+   "task": 0.23728813559322035,
+   "color": 0.36,
+   "motion": 0.475,
+   "next_action": 0.3958333333333333,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.40626840144453497,
+   "aux_train_acc": {
+    "tactile": 0.38716814159292035
+   }
+  },
+  {
+   "epoch": 9,
+   "task": 0.3389830508474576,
+   "color": 0.3,
+   "motion": 0.475,
+   "next_action": 0.4583333333333333,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.4265581972617616,
+   "aux_train_acc": {
+    "tactile": 0.39504977876106195
+   }
+  },
+  {
+   "epoch": 10,
+   "task": 0.3898305084745763,
+   "color": 0.3,
+   "motion": 0.475,
+   "next_action": 0.4166666666666667,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.5217391304347826,
+   "avg": 0.4353347059000978,
+   "aux_train_acc": {
+    "tactile": 0.4022400442477876
+   }
+  },
+  {
+   "epoch": 11,
+   "task": 0.288135593220339,
+   "color": 0.42,
+   "motion": 0.5,
+   "next_action": 0.3958333333333333,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.5217391304347826,
+   "avg": 0.4361560211939823,
+   "aux_train_acc": {
+    "tactile": 0.3915929203539823
+   }
+  },
+  {
+   "epoch": 12,
+   "task": 0.1694915254237288,
+   "color": 0.32,
+   "motion": 0.5,
+   "next_action": 0.3541666666666667,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.5217391304347826,
+   "avg": 0.39569487539162324,
+   "aux_train_acc": {
+    "tactile": 0.3985066371681416
+   }
+  },
+  {
+   "epoch": 13,
+   "task": 0.2711864406779661,
+   "color": 0.36,
+   "motion": 0.5,
+   "next_action": 0.3958333333333333,
+   "goal_side": 0.5087719298245614,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.419008762233513,
+   "aux_train_acc": {
+    "tactile": 0.4052820796460177
+   }
+  },
+  {
+   "epoch": 14,
+   "task": 0.3559322033898305,
+   "color": 0.36,
+   "motion": 0.5,
+   "next_action": 0.4166666666666667,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.4336813016328589,
+   "aux_train_acc": {
+    "tactile": 0.39919800884955753
+   }
+  },
+  {
+   "epoch": 15,
+   "task": 0.3220338983050847,
+   "color": 0.36,
+   "motion": 0.5,
+   "next_action": 0.4375,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.4315038063409568,
+   "aux_train_acc": {
+    "tactile": 0.40998340707964603
+   }
+  }
+ ],
+ "ckpt": "ckpt_robot/omni_v1_ep15_amp1_qc1_os1_gc1_bal1_s0_Qwen2.5-0.5B-Instruct_bcore/tactile_only__2M.pt",
+ "task": 0.2733333333333333,
+ "color": 0.37333333333333335,
+ "motion": 0.46,
+ "next_action": 0.34,
+ "goal_side": 0.5,
+ "goal_dist": 0.5,
+ "avg": 0.4077777777777778,
+ "ood": {
+  "test_compositional": {
+   "task": 0.26666666666666666,
+   "color": 0.34,
+   "motion": 0.30666666666666664,
+   "next_action": 0.3,
+   "goal_side": 1.0,
+   "goal_dist": 1.0,
+   "avg": 0.5355555555555556
+  },
+  "test_visual_ood": {
+   "task": 0.25333333333333335,
+   "color": 0.0,
+   "motion": 0.5,
+   "next_action": 0.32,
+   "goal_side": 0.5,
+   "goal_dist": 0.5,
+   "avg": 0.34555555555555556
+  }
+ },
+ "reps": [
+  "tactile"
+ ],
+ "agg": "qformer",
+ "fusion": null,
+ "options": {},
+ "hardware": {
+  "device": "NVIDIA A100-SXM4-40GB",
+  "torch": "2.8.0+cu128",
+  "transformers": "4.57.3",
+  "python": "3.11.13",
+  "llm_dtype": "torch.float32",
+  "amp": true
+ },
+ "finished": "2026-11-27T02:40:40"
+}

@@ -1,0 +1,261 @@
+{
+ "setting": "point only",
+ "budget": 2000000.0,
+ "width": 376,
+ "params": 2675385,
+ "params_core": 1999568,
+ "params_interface": 675817,
+ "budget_scope": "core",
+ "enc_params": {
+  "point": 288768
+ },
+ "tag": "omni_v1_ep15_amp1_qc1_os1_gc1_bal1_s0_Qwen2.5-0.5B-Instruct_bcore",
+ "seed": 0,
+ "backbone": "Qwen2.5-0.5B-Instruct",
+ "llm_name": "Qwen/Qwen2.5-0.5B-Instruct",
+ "llm_dim": 896,
+ "data": "omni_v1",
+ "data_seed": 0,
+ "balance": true,
+ "secs": 281.70063042640686,
+ "curve": [
+  {
+   "epoch": 1,
+   "task": 0.0,
+   "color": 0.42,
+   "motion": 0.1,
+   "next_action": 0.0,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.4782608695652174,
+   "avg": 0.24824815662344268,
+   "aux_train_acc": {
+    "point": 0.2975663716814159
+   }
+  },
+  {
+   "epoch": 2,
+   "task": 0.2033898305084746,
+   "color": 0.36,
+   "motion": 0.425,
+   "next_action": 0.041666666666666664,
+   "goal_side": 0.49122807017543857,
+   "goal_dist": 0.5217391304347826,
+   "avg": 0.34050394963089375,
+   "aux_train_acc": {
+    "point": 0.4579646017699115
+   }
+  },
+  {
+   "epoch": 3,
+   "task": 0.288135593220339,
+   "color": 0.38,
+   "motion": 0.55,
+   "next_action": 0.2916666666666667,
+   "goal_side": 1.0,
+   "goal_dist": 0.8478260869565217,
+   "avg": 0.5596047244739212,
+   "aux_train_acc": {
+    "point": 0.5683075221238938
+   }
+  },
+  {
+   "epoch": 4,
+   "task": 0.3559322033898305,
+   "color": 0.36,
+   "motion": 0.425,
+   "next_action": 0.3125,
+   "goal_side": 0.5614035087719298,
+   "goal_dist": 0.9565217391304348,
+   "avg": 0.4952262418820325,
+   "aux_train_acc": {
+    "point": 0.6218196902654868
+   }
+  },
+  {
+   "epoch": 5,
+   "task": 0.4745762711864407,
+   "color": 0.46,
+   "motion": 0.625,
+   "next_action": 0.3333333333333333,
+   "goal_side": 0.9824561403508771,
+   "goal_dist": 1.0,
+   "avg": 0.6458942908117752,
+   "aux_train_acc": {
+    "point": 0.6750553097345132
+   }
+  },
+  {
+   "epoch": 6,
+   "task": 0.6610169491525424,
+   "color": 0.52,
+   "motion": 0.625,
+   "next_action": 0.4583333333333333,
+   "goal_side": 1.0,
+   "goal_dist": 0.9782608695652174,
+   "avg": 0.7071018586751823,
+   "aux_train_acc": {
+    "point": 0.7418418141592921
+   }
+  },
+  {
+   "epoch": 7,
+   "task": 0.6440677966101694,
+   "color": 0.72,
+   "motion": 0.675,
+   "next_action": 0.4166666666666667,
+   "goal_side": 1.0,
+   "goal_dist": 0.9565217391304348,
+   "avg": 0.7353760337345451,
+   "aux_train_acc": {
+    "point": 0.7718473451327433
+   }
+  },
+  {
+   "epoch": 8,
+   "task": 0.423728813559322,
+   "color": 0.74,
+   "motion": 0.725,
+   "next_action": 0.5,
+   "goal_side": 1.0,
+   "goal_dist": 1.0,
+   "avg": 0.7314548022598869,
+   "aux_train_acc": {
+    "point": 0.7918971238938053
+   }
+  },
+  {
+   "epoch": 9,
+   "task": 0.6101694915254238,
+   "color": 1.0,
+   "motion": 0.7,
+   "next_action": 0.5833333333333334,
+   "goal_side": 1.0,
+   "goal_dist": 0.9782608695652174,
+   "avg": 0.8119606157373291,
+   "aux_train_acc": {
+    "point": 0.8206581858407079
+   }
+  },
+  {
+   "epoch": 10,
+   "task": 0.6440677966101694,
+   "color": 1.0,
+   "motion": 0.75,
+   "next_action": 0.6666666666666666,
+   "goal_side": 1.0,
+   "goal_dist": 1.0,
+   "avg": 0.8434557438794726,
+   "aux_train_acc": {
+    "point": 0.8589601769911505
+   }
+  },
+  {
+   "epoch": 11,
+   "task": 0.6271186440677966,
+   "color": 1.0,
+   "motion": 0.8,
+   "next_action": 0.625,
+   "goal_side": 1.0,
+   "goal_dist": 0.9782608695652174,
+   "avg": 0.8383965856055023,
+   "aux_train_acc": {
+    "point": 0.8694690265486725
+   }
+  },
+  {
+   "epoch": 12,
+   "task": 0.711864406779661,
+   "color": 1.0,
+   "motion": 0.75,
+   "next_action": 0.7083333333333334,
+   "goal_side": 1.0,
+   "goal_dist": 1.0,
+   "avg": 0.8616996233521658,
+   "aux_train_acc": {
+    "point": 0.8774889380530974
+   }
+  },
+  {
+   "epoch": 13,
+   "task": 0.7457627118644068,
+   "color": 1.0,
+   "motion": 0.8,
+   "next_action": 0.625,
+   "goal_side": 1.0,
+   "goal_dist": 1.0,
+   "avg": 0.8617937853107346,
+   "aux_train_acc": {
+    "point": 0.8863384955752213
+   }
+  },
+  {
+   "epoch": 14,
+   "task": 0.7627118644067796,
+   "color": 1.0,
+   "motion": 0.825,
+   "next_action": 0.625,
+   "goal_side": 1.0,
+   "goal_dist": 1.0,
+   "avg": 0.8687853107344633,
+   "aux_train_acc": {
+    "point": 0.8918694690265486
+   }
+  },
+  {
+   "epoch": 15,
+   "task": 0.7457627118644068,
+   "color": 1.0,
+   "motion": 0.825,
+   "next_action": 0.6875,
+   "goal_side": 1.0,
+   "goal_dist": 1.0,
+   "avg": 0.8763771186440678,
+   "aux_train_acc": {
+    "point": 0.8938053097345132
+   }
+  }
+ ],
+ "ckpt": "ckpt_robot/omni_v1_ep15_amp1_qc1_os1_gc1_bal1_s0_Qwen2.5-0.5B-Instruct_bcore/point_only__2M.pt",
+ "task": 0.7066666666666667,
+ "color": 1.0,
+ "motion": 0.7733333333333333,
+ "next_action": 0.6066666666666667,
+ "goal_side": 1.0,
+ "goal_dist": 1.0,
+ "avg": 0.8477777777777779,
+ "ood": {
+  "test_compositional": {
+   "task": 0.36,
+   "color": 1.0,
+   "motion": 0.5333333333333333,
+   "next_action": 0.38,
+   "goal_side": 1.0,
+   "goal_dist": 0.6333333333333333,
+   "avg": 0.6511111111111111
+  },
+  "test_visual_ood": {
+   "task": 0.36666666666666664,
+   "color": 0.0,
+   "motion": 0.6466666666666666,
+   "next_action": 0.5666666666666667,
+   "goal_side": 0.78,
+   "goal_dist": 0.8933333333333333,
+   "avg": 0.5422222222222222
+  }
+ },
+ "reps": [
+  "point"
+ ],
+ "agg": "qformer",
+ "fusion": null,
+ "options": {},
+ "hardware": {
+  "device": "NVIDIA A100-SXM4-40GB",
+  "torch": "2.8.0+cu128",
+  "transformers": "4.57.3",
+  "python": "3.11.13",
+  "llm_dtype": "torch.float32",
+  "amp": true
+ },
+ "finished": "2026-11-27T01:45:22"
+}
